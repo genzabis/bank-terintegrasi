@@ -1,0 +1,18 @@
+[
+    {
+        "username": "admin",
+        "nama": "Administrator AppsEcommerce",
+        "email": "admin@apps.local",
+        "password": "$2y$10$RLZ3zeUtKdwlY3.GcZebtOL93CJGF5zL2yddlQ476s\/Slse3RKz0e",
+        "role": "admin",
+        "dibuat": "2026-05-20 08:46:11"
+    },
+    {
+        "username": "user",
+        "nama": "Demo User",
+        "email": "user@apps.local",
+        "password": "$2y$10$lvI7paHExZ4A05JdHwjABOqFYzZNiU8Kt1.4oXJV\/ktobn9D17cUe",
+        "role": "user",
+        "dibuat": "2026-05-20 08:46:11"
+    }
+]

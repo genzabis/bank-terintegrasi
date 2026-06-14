@@ -1,0 +1,46 @@
+[
+    {
+        "id": "PS001",
+        "nama": "Lukisan Cat Air",
+        "harga": 150000,
+        "stok": 3,
+        "siswa_id": "S0001",
+        "siswa_nama": "Andi Pratama",
+        "deskripsi": "Lukisan pemandangan dengan cat air karya siswa",
+        "ecommerce_id": "P2026052008293656",
+        "dibuat": "2026-02-01 10:00:00"
+    },
+    {
+        "id": "PS002",
+        "nama": "Kerajinan Tangan Gantungan Kunci",
+        "harga": 25000,
+        "stok": 20,
+        "siswa_id": "S0002",
+        "siswa_nama": "Bella Saputri",
+        "deskripsi": "Gantungan kunci handmade dari resin",
+        "ecommerce_id": "P2026052008293586",
+        "dibuat": "2026-02-02 11:30:00"
+    },
+    {
+        "nama": "Hackaton",
+        "harga": 4,
+        "stok": 5,
+        "siswa_id": "S0004",
+        "siswa_nama": "Dimas Aditya",
+        "deskripsi": "Produk",
+        "ecommerce_id": "P2026052008293394",
+        "id": "PS2026052008290839",
+        "dibuat": "2026-05-20 08:29:08"
+    },
+    {
+        "nama": "Hackaton",
+        "harga": 4.0e+19,
+        "stok": 1,
+        "siswa_id": "S0001",
+        "siswa_nama": "Andi Pratama",
+        "deskripsi": "",
+        "ecommerce_id": "P2026052008293073",
+        "id": "PS2026052008292252",
+        "dibuat": "2026-05-20 08:29:22"
+    }
+]

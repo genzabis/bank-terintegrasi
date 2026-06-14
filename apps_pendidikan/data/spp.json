@@ -1,0 +1,32 @@
+[
+    {
+        "id": "SPP202601001",
+        "siswa_id": "S0001",
+        "bulan": "Januari 2026",
+        "jumlah": 500000,
+        "status": "LUNAS",
+        "dibuat": "2026-01-05 08:00:00",
+        "dibayar_via": "1004",
+        "waktu_bayar": "2026-05-20 08:28:36"
+    },
+    {
+        "id": "SPP202601002",
+        "siswa_id": "S0002",
+        "bulan": "Januari 2026",
+        "jumlah": 500000,
+        "status": "LUNAS",
+        "dibuat": "2026-01-05 08:00:00",
+        "dibayar_via": "1002",
+        "waktu_bayar": "2026-05-20 08:28:41"
+    },
+    {
+        "id": "SPP202601003",
+        "siswa_id": "S0003",
+        "bulan": "Januari 2026",
+        "jumlah": 450000,
+        "status": "LUNAS",
+        "dibuat": "2026-01-05 08:00:00",
+        "dibayar_via": "1001",
+        "waktu_bayar": "2026-05-20 08:28:42"
+    }
+]

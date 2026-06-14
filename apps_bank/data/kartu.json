@@ -1,0 +1,79 @@
+[
+    {
+        "id": "KRT2026010101",
+        "no_kartu": "4321 1234 5678 1001",
+        "no_rek": "1001",
+        "tipe": "GOLD",
+        "limit_harian": 5000000,
+        "aktif": true,
+        "cvv": "421",
+        "expired": "01\/29",
+        "dibuat": "2026-01-12 09:00:00"
+    },
+    {
+        "id": "KRT2026010102",
+        "no_kartu": "4321 5566 7788 1002",
+        "no_rek": "1002",
+        "tipe": "SILVER",
+        "limit_harian": 2000000,
+        "aktif": true,
+        "cvv": "133",
+        "expired": "01\/29",
+        "dibuat": "2026-01-12 09:30:00"
+    },
+    {
+        "id": "KRT2026052008250831",
+        "no_kartu": "4321 2112 3117 1001",
+        "no_rek": "1001",
+        "tipe": "SILVER",
+        "limit_harian": 2000000,
+        "aktif": false,
+        "cvv": "612",
+        "expired": "05\/29",
+        "dibuat": "2026-05-20 08:25:08"
+    },
+    {
+        "id": "KRT2026052008263557",
+        "no_kartu": "4321 1792 7706 1003",
+        "no_rek": "1003",
+        "tipe": "SILVER",
+        "limit_harian": 2000000,
+        "aktif": true,
+        "cvv": "210",
+        "expired": "05\/29",
+        "dibuat": "2026-05-20 08:26:35"
+    },
+    {
+        "id": "KRT2026052008263899",
+        "no_kartu": "4321 2581 2072 1004",
+        "no_rek": "1004",
+        "tipe": "SILVER",
+        "limit_harian": 2000000,
+        "aktif": true,
+        "cvv": "806",
+        "expired": "05\/29",
+        "dibuat": "2026-05-20 08:26:38"
+    },
+    {
+        "id": "KRT2026052008264024",
+        "no_kartu": "4321 8071 5616 1005",
+        "no_rek": "1005",
+        "tipe": "SILVER",
+        "limit_harian": 2000000,
+        "aktif": true,
+        "cvv": "776",
+        "expired": "05\/29",
+        "dibuat": "2026-05-20 08:26:40"
+    },
+    {
+        "id": "KRT2026052008264354",
+        "no_kartu": "4321 4994 3347 1001",
+        "no_rek": "1001",
+        "tipe": "GOLD",
+        "limit_harian": 2000000,
+        "aktif": true,
+        "cvv": "081",
+        "expired": "05\/29",
+        "dibuat": "2026-05-20 08:26:43"
+    }
+]

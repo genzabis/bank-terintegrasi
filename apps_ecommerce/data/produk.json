@@ -1,0 +1,9 @@
+[
+    {"id":"P001","nama":"Sepatu Sneakers Urban","harga":350000,"stok":20,"kategori":"fashion","deskripsi":"Sneakers ringan dan nyaman dipakai harian, sole anti slip.","sumber":"INTERNAL","rating":4.7,"terjual":142,"dibuat":"2026-01-12 10:00:00"},
+    {"id":"P002","nama":"Tas Punggung Tahan Air","harga":250000,"stok":15,"kategori":"fashion","deskripsi":"Material polyester tahan air dengan kompartemen laptop 15 inch.","sumber":"INTERNAL","rating":4.5,"terjual":89,"dibuat":"2026-01-12 10:05:00"},
+    {"id":"P003","nama":"Snack Combo Box Family","harga":75000,"stok":50,"kategori":"makanan","deskripsi":"Paket camilan keluarga isi 12 pcs varian.","sumber":"INTERNAL","rating":4.6,"terjual":320,"dibuat":"2026-01-12 10:10:00"},
+    {"id":"P004","nama":"Headphone Bluetooth Pro","harga":480000,"stok":8,"kategori":"elektronik","deskripsi":"Headphone wireless dengan baterai 20 jam, ANC aktif, suara hi-fi.","sumber":"INTERNAL","rating":4.8,"terjual":67,"dibuat":"2026-01-12 10:15:00"},
+    {"id":"P005","nama":"Smartwatch Fit-Tracker","harga":720000,"stok":12,"kategori":"elektronik","deskripsi":"Smartwatch dengan SpO2 sensor, GPS, dan ketahanan air IP68.","sumber":"INTERNAL","rating":4.4,"terjual":41,"dibuat":"2026-01-13 09:00:00"},
+    {"id":"P006","nama":"Kemeja Linen Premium","harga":280000,"stok":25,"kategori":"fashion","deskripsi":"Kemeja linen sejuk untuk cuaca tropis, slim fit.","sumber":"INTERNAL","rating":4.6,"terjual":73,"dibuat":"2026-01-13 09:30:00"},
+    {"id":"P007","nama":"Kopi Arabika Single Origin","harga":95000,"stok":80,"kategori":"makanan","deskripsi":"Biji kopi arabika dari Gayo, roasting medium 250gr.","sumber":"INTERNAL","rating":4.9,"terjual":215,"dibuat":"2026-01-13 10:00:00"}
+]

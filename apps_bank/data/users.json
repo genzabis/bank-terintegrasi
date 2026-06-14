@@ -1,0 +1,18 @@
+[
+    {
+        "username": "admin",
+        "nama": "Administrator AppsBank",
+        "email": "admin@apps.local",
+        "password": "$2y$10$bJoFWnrcJv3m4.9LXP2jIe3DQmJ6fODvLfUlQp.mtrZfRymiZNmHG",
+        "role": "admin",
+        "dibuat": "2026-05-20 08:46:10"
+    },
+    {
+        "username": "user",
+        "nama": "Demo User",
+        "email": "user@apps.local",
+        "password": "$2y$10$sWjTQ7OeLr\/kbnM9UQLp.OtQpHfMB30oHoFbC1nOBHiNhiDANYyba",
+        "role": "user",
+        "dibuat": "2026-05-20 08:46:10"
+    }
+]

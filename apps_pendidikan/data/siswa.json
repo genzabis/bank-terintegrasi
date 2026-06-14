@@ -1,0 +1,30 @@
+[
+    {
+        "id": "S0001",
+        "nama": "Andi Pratama",
+        "kelas": "12 IPA 1",
+        "no_rek": "1001",
+        "dibuat": "2026-01-15 08:00:00"
+    },
+    {
+        "id": "S0002",
+        "nama": "Bella Saputri",
+        "kelas": "12 IPA 2",
+        "no_rek": "1002",
+        "dibuat": "2026-01-15 08:05:00"
+    },
+    {
+        "id": "S0003",
+        "nama": "Citra Lestari",
+        "kelas": "11 IPS 1",
+        "no_rek": "1001",
+        "dibuat": "2026-01-15 08:10:00"
+    },
+    {
+        "id": "S0004",
+        "nama": "Dimas Aditya",
+        "kelas": "11 IPA 1",
+        "no_rek": "1002",
+        "dibuat": "2026-01-15 08:15:00"
+    }
+]

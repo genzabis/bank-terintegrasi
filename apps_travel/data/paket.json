@@ -1,0 +1,38 @@
+[
+    {
+        "id": "PKT001",
+        "nama": "Bali Honeymoon 4D3N",
+        "destinasi": "Bali",
+        "harga": 4500000,
+        "include": ["Tiket pesawat PP", "Hotel 4 malam Kuta", "Tour ke Tanah Lot", "Makan 2x"],
+        "rating": 4.8,
+        "dibuat": "2026-01-25 09:00:00"
+    },
+    {
+        "id": "PKT002",
+        "nama": "Yogya Heritage 3D2N",
+        "destinasi": "Yogyakarta",
+        "harga": 1850000,
+        "include": ["Tiket kereta PP", "Hotel di Malioboro", "Tour Borobudur + Prambanan"],
+        "rating": 4.7,
+        "dibuat": "2026-01-25 09:30:00"
+    },
+    {
+        "id": "PKT003",
+        "nama": "Lombok Sunset Tour 5D4N",
+        "destinasi": "Lombok",
+        "harga": 5200000,
+        "include": ["Tiket pesawat PP", "Resort Senggigi", "Sailing Gili Trawangan"],
+        "rating": 4.9,
+        "dibuat": "2026-01-25 10:00:00"
+    },
+    {
+        "id": "PKT004",
+        "nama": "Bromo Sunrise Adventure 2D1N",
+        "destinasi": "Bromo",
+        "harga": 850000,
+        "include": ["Jeep tour", "Penginapan", "Sunrise di Penanjakan"],
+        "rating": 4.6,
+        "dibuat": "2026-01-25 10:30:00"
+    }
+]

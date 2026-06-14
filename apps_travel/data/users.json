@@ -1,0 +1,18 @@
+[
+    {
+        "username": "admin",
+        "nama": "Administrator AppsTravel",
+        "email": "admin@apps.local",
+        "password": "$2y$10$cb.hUe.LnnHGex8iX05K8ehFCZauvPw065epMbH7bBKws6E.70hRm",
+        "role": "admin",
+        "dibuat": "2026-05-20 08:46:11"
+    },
+    {
+        "username": "user",
+        "nama": "Demo User",
+        "email": "user@apps.local",
+        "password": "$2y$10$UlqqOrhqqUTVsVOF\/SVeIetoa26aciRGN5FrDpNGUpkbg9tcaoQZm",
+        "role": "user",
+        "dibuat": "2026-05-20 08:46:11"
+    }
+]

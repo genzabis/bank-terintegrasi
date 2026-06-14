@@ -1,0 +1,18 @@
+[
+    {
+        "id": "REV001",
+        "produk_id": "P001",
+        "user": "Budi",
+        "star": 5,
+        "komentar": "Sepatunya nyaman banget, sesuai ekspektasi!",
+        "tanggal": "2026-02-15 10:00:00"
+    },
+    {
+        "id": "REV002",
+        "produk_id": "P004",
+        "user": "Siti",
+        "star": 4,
+        "komentar": "Bass-nya mantap, baterai awet seharian.",
+        "tanggal": "2026-02-18 14:30:00"
+    }
+]

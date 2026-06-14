@@ -1,0 +1,18 @@
+[
+    {
+        "username": "admin",
+        "nama": "Administrator AppsPendidikan",
+        "email": "admin@apps.local",
+        "password": "$2y$10$AW0mnsaEQkmb1UXStSLKwOc6\/H\/aLIEDRDytsL\/m0xJMFuGq0WaQS",
+        "role": "admin",
+        "dibuat": "2026-05-20 08:46:11"
+    },
+    {
+        "username": "user",
+        "nama": "Demo User",
+        "email": "user@apps.local",
+        "password": "$2y$10$xQhj0h9HIqtAceUl\/jynzeVDtTchJPyMIqemsrrpsRjsTBxUKjDVO",
+        "role": "user",
+        "dibuat": "2026-05-20 08:46:11"
+    }
+]

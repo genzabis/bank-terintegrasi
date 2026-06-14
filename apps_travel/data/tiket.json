@@ -1,0 +1,47 @@
+[
+    {
+        "id": "T001",
+        "nama": "Tiket Pesawat Jakarta - Bali",
+        "rute": "CGK → DPS",
+        "harga": 850000,
+        "kuota": 47,
+        "tipe": "pesawat",
+        "dibuat": "2026-01-20 09:00:00"
+    },
+    {
+        "id": "T002",
+        "nama": "Tiket Pesawat Jakarta - Yogyakarta",
+        "rute": "CGK → JOG",
+        "harga": 650000,
+        "kuota": 78,
+        "tipe": "pesawat",
+        "dibuat": "2026-01-20 09:05:00"
+    },
+    {
+        "id": "T003",
+        "nama": "Tiket Kereta Eksekutif Jkt - Sby",
+        "rute": "GMR → SGU",
+        "harga": 425000,
+        "kuota": 99,
+        "tipe": "kereta",
+        "dibuat": "2026-01-20 09:10:00"
+    },
+    {
+        "id": "T004",
+        "nama": "Tiket Wisata Bromo Tour 1 Hari",
+        "rute": "Probolinggo",
+        "harga": 350000,
+        "kuota": 40,
+        "tipe": "wisata",
+        "dibuat": "2026-01-20 09:15:00"
+    },
+    {
+        "id": "T005",
+        "nama": "Tiket Pesawat Jakarta - Lombok",
+        "rute": "CGK → LOP",
+        "harga": 950000,
+        "kuota": 30,
+        "tipe": "pesawat",
+        "dibuat": "2026-01-20 09:20:00"
+    }
+]
