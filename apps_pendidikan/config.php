@@ -5,12 +5,12 @@
 define('SISTEM_NAMA', 'AppsPendidikan');
 define('SISTEM_KODE', 'C');
 define('SISTEM_PORT', 8002);
-define('SISTEM_URL',  'http://localhost:8002');
+define('SISTEM_URL',  'http://10.10.7.71:8002');
 
-// URL sistem lain
-define('BANK_URL',      'http://localhost:8000');
-define('ECOMMERCE_URL', 'http://localhost:8001');
-define('TRAVEL_URL',    'http://localhost:8003');
+// URL sistem lain (full-mesh)
+define('BANK_URL',      'http://10.10.6.140:8000');
+define('ECOMMERCE_URL', 'http://10.10.7.114:8001');
+define('TRAVEL_URL',    'http://10.10.6.140:8003');
 
 // Path data
 define('DATA_DIR',           __DIR__ . '/data');
