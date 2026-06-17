@@ -12,11 +12,11 @@ set "PHP_BIN=php"
 if exist "C:\xampp\php\php.exe" set "PHP_BIN=C:\xampp\php\php.exe"
 if exist "D:\xampp\php\php.exe" set "PHP_BIN=D:\xampp\php\php.exe"
 
-REM Buka 4 window terpisah, pindah direktori, lalu jalankan server PHP
-start "AppsBank :8000"       cmd /k "cd /d "%ROOT%apps_bank" & "%PHP_BIN%" -S localhost:8000 -t "%ROOT%apps_bank""
-start "AppsEcommerce :8001"  cmd /k "cd /d "%ROOT%apps_ecommerce" & "%PHP_BIN%" -S localhost:8001 -t "%ROOT%apps_ecommerce""
-start "AppsPendidikan :8002" cmd /k "cd /d "%ROOT%apps_pendidikan" & "%PHP_BIN%" -S localhost:8002 -t "%ROOT%apps_pendidikan""
-start "AppsTravel :8003"     cmd /k "cd /d "%ROOT%apps_travel" & "%PHP_BIN%" -S localhost:8003 -t "%ROOT%apps_travel""
+REM Buka 4 window terpisah, masing-masing langsung php -S di working directory yg benar
+start "AppsBank :8000"       /D "%ROOT%apps_bank"       cmd /c "%PHP_BIN% -S localhost:8000"
+start "AppsEcommerce :8001"  /D "%ROOT%apps_ecommerce"  cmd /c "%PHP_BIN% -S localhost:8001"
+start "AppsPendidikan :8002" /D "%ROOT%apps_pendidikan" cmd /c "%PHP_BIN% -S localhost:8002"
+start "AppsTravel :8003"     /D "%ROOT%apps_travel"     cmd /c "%PHP_BIN% -S localhost:8003"
 
 echo.
 echo Menunggu server siap...
