@@ -13,10 +13,10 @@ if exist "C:\xampp\php\php.exe" set PHP_BIN="C:\xampp\php\php.exe"
 if exist "D:\xampp\php\php.exe" set PHP_BIN="D:\xampp\php\php.exe"
 
 REM Buka 4 window terpisah, masing-masing langsung php -S di working directory yg benar
-start "AppsBank :8000"       /D "%ROOT%apps_bank"       cmd /k %PHP_BIN% -S localhost:8000
-start "AppsEcommerce :8001"  /D "%ROOT%apps_ecommerce"  cmd /k %PHP_BIN% -S localhost:8001
-start "AppsPendidikan :8002" /D "%ROOT%apps_pendidikan" cmd /k %PHP_BIN% -S localhost:8002
-start "AppsTravel :8003"     /D "%ROOT%apps_travel"     cmd /k %PHP_BIN% -S localhost:8003
+start "AppsBank :8000"       /D "%ROOT%apps_bank"       cmd /k %PHP_BIN% -S localhost:8000 -t "%ROOT%apps_bank"
+start "AppsEcommerce :8001"  /D "%ROOT%apps_ecommerce"  cmd /k %PHP_BIN% -S localhost:8001 -t "%ROOT%apps_ecommerce"
+start "AppsPendidikan :8002" /D "%ROOT%apps_pendidikan" cmd /k %PHP_BIN% -S localhost:8002 -t "%ROOT%apps_pendidikan"
+start "AppsTravel :8003"     /D "%ROOT%apps_travel"     cmd /k %PHP_BIN% -S localhost:8003 -t "%ROOT%apps_travel"
 
 echo.
 echo Menunggu server siap...
