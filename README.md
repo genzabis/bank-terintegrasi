@@ -124,6 +124,9 @@ Sebelum menjalankan aplikasi, pastikan komputer Anda memenuhi syarat berikut:
 ### Metode B: Menjalankan Manual (Windows, Linux, macOS)
 Buka 4 terminal atau tab command line terpisah, atur environment variable `PHP_CLI_SERVER_WORKERS=4`, kemudian jalankan perintah berikut:
 
+.\start_all.bat
+
+
 * **Terminal 1: AppsBank (Port 8000)**
   ```bash
   # Windows CMD
@@ -313,5 +316,6 @@ Travel pesan tiket Yogya 650k pakai voucher EDU 30%:
   -> Bank debit 455k [Sukses]
   -> saldo 1002: 3,5jt -> 3,045jt [Sukses]
 ```
-#   b a n k - t e r i n t e g r a s i  
+#   b a n k - t e r i n t e g r a s i 
+ 
  
