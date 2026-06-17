@@ -9,8 +9,8 @@ set PHP_CLI_SERVER_WORKERS=4
 
 REM Deteksi lokasi PHP
 set PHP_BIN=php
-if exist "C:\xampp\php\php.exe" set PHP_BIN="C:\xampp\php\php.exe"
-if exist "D:\xampp\php\php.exe" set PHP_BIN="D:\xampp\php\php.exe"
+if exist "C:\xampp\php\php.exe" set PHP_BIN=C:\xampp\php\php.exe
+if exist "D:\xampp\php\php.exe" set PHP_BIN=D:\xampp\php\php.exe
 
 REM Buka 4 window terpisah, masing-masing langsung php -S di working directory yg benar
 start "AppsBank :8000"       /D "%ROOT%apps_bank"       cmd /k %PHP_BIN% -S localhost:8000 -t "%ROOT%apps_bank"
