@@ -316,6 +316,4 @@ Travel pesan tiket Yogya 650k pakai voucher EDU 30%:
   -> Bank debit 455k [Sukses]
   -> saldo 1002: 3,5jt -> 3,045jt [Sukses]
 ```
-#   b a n k - t e r i n t e g r a s i 
- 
- 
+#
