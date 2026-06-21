@@ -1,1 +1,44 @@
-[]
+[
+    {
+        "user": "guest",
+        "no_rek": "1006",
+        "items": [
+            {
+                "produk_id": "P001",
+                "nama": "Sepatu Sneakers Urban",
+                "qty": 2,
+                "harga": 350000,
+                "sub": 700000
+            }
+        ],
+        "subtotal": 700000,
+        "diskon": 0,
+        "voucher": "",
+        "total": 700000,
+        "status": "LUNAS",
+        "metode": "BANK",
+        "id": "PSN2026061711320143",
+        "tanggal": "2026-06-17 11:32:01"
+    },
+    {
+        "user": "guest",
+        "no_rek": "1006",
+        "items": [
+            {
+                "produk_id": "P001",
+                "nama": "Sepatu Sneakers Urban",
+                "qty": 1,
+                "harga": 350000,
+                "sub": 350000
+            }
+        ],
+        "subtotal": 350000,
+        "diskon": 0,
+        "voucher": "",
+        "total": 350000,
+        "status": "LUNAS",
+        "metode": "BANK",
+        "id": "PSN2026061711344350",
+        "tanggal": "2026-06-17 11:34:43"
+    }
+]

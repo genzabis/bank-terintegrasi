@@ -1,1 +1,70 @@
-[]
+[
+    {
+        "id": "AUD20260617113201658",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/10.10.6.140:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 1006 Rp 700.000 sukses",
+        "payload": {
+            "no_rek": "1006",
+            "jumlah": 700000
+        },
+        "tanggal": "2026-06-17 11:32:01"
+    },
+    {
+        "id": "AUD20260617113443851",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/10.10.6.140:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 1006 Rp 350.000 sukses",
+        "payload": {
+            "no_rek": "1006",
+            "jumlah": 350000
+        },
+        "tanggal": "2026-06-17 11:34:43"
+    },
+    {
+        "id": "AUD20260617113629180",
+        "arah": "IN",
+        "peer": "AppsPendidikan",
+        "action": "add_produk",
+        "endpoint": "POST \/api.php?action=add_produk",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "add_produk",
+            "nama": "Buku",
+            "harga": 50000,
+            "stok": 1,
+            "kategori": "siswa",
+            "deskripsi": "Karya siswa: Andi Pratama",
+            "sumber": "AppsPendidikan",
+            "asal_id": "PS2026061711361159"
+        },
+        "tanggal": "2026-06-17 11:36:29"
+    },
+    {
+        "id": "AUD20260617114054116",
+        "arah": "IN",
+        "peer": "AppsPendidikan",
+        "action": "add_produk",
+        "endpoint": "POST \/api.php?action=add_produk",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "add_produk",
+            "nama": "Buku",
+            "harga": 50000,
+            "stok": 1,
+            "kategori": "siswa",
+            "deskripsi": "Karya siswa: Andi Pratama",
+            "sumber": "AppsPendidikan",
+            "asal_id": "PS2026061711361159"
+        },
+        "tanggal": "2026-06-17 11:40:54"
+    }
+]
