@@ -2,20 +2,27 @@
 require_once __DIR__ . '/../_layout.php';
 
 $msg = ''; $cls = '';
+if (isset($_GET['msg'])) {
+    $msg = $_GET['msg'];
+    $cls = $_GET['err'] ?? 0 ? 'danger' : 'success';
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dari = trim($_POST['dari']);
     $ke   = trim($_POST['ke']);
     $amt  = (float)$_POST['jumlah'];
     $ket  = trim($_POST['keterangan'] ?? 'Transfer');
-    if (!$dari || !$ke || $amt <= 0) { $msg = 'Parameter tidak lengkap'; $cls='danger'; }
-    elseif ($dari === $ke)            { $msg = 'Rekening asal & tujuan sama'; $cls='danger'; }
-    else {
+    if (!$dari || !$ke || $amt <= 0) { 
+        header("Location: transfer.php?msg=" . urlencode('Parameter tidak lengkap') . "&err=1"); exit;
+    } elseif ($dari === $ke) { 
+        header("Location: transfer.php?msg=" . urlencode('Rekening asal & tujuan sama') . "&err=1"); exit;
+    } else {
         $r1 = update_saldo($dari, $amt, 'DEBIT', "Transfer ke $ke - $ket", 'INTERNAL');
-        if (!$r1['success']) { $msg = $r1['message']; $cls='danger'; }
-        else {
+        if (!$r1['success']) { 
+            header("Location: transfer.php?msg=" . urlencode($r1['message']) . "&err=1"); exit;
+        } else {
             update_saldo($ke, $amt, 'KREDIT', "Transfer dari $dari - $ket", 'INTERNAL');
-            $msg = 'Transfer sukses · Sisa saldo ' . format_rupiah($r1['saldo']);
-            $cls = 'success';
+            header("Location: transfer.php?msg=" . urlencode('Transfer sukses · Sisa saldo ' . format_rupiah($r1['saldo'])) . "&err=0"); exit;
         }
     }
 }

@@ -2,20 +2,37 @@
 require_once __DIR__ . '/../_layout.php';
 
 $msg = ''; $cls = '';
+if (isset($_GET['msg'])) {
+    $msg = $_GET['msg'];
+    $cls = $_GET['err'] ?? 0 ? 'danger' : 'success';
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['act'] ?? '') === 'add') {
+    $no_rek = trim($_POST['no_rek']);
+    $nama   = trim($_POST['nama']);
+    $saldo  = (float)$_POST['saldo'];
+
+    if (find_rekening($no_rek)) {
+        header("Location: rekening.php?msg=" . urlencode('Gagal: Nomor rekening sudah terdaftar!') . "&err=1");
+        exit;
+    }
+
     $rek = get_rekening();
     $rek[] = [
-        'no_rek' => trim($_POST['no_rek']),
-        'nama'   => trim($_POST['nama']),
-        'saldo'  => (float)$_POST['saldo'],
+        'no_rek' => $no_rek,
+        'nama'   => $nama,
+        'saldo'  => $saldo,
         'dibuat' => date('Y-m-d H:i:s'),
     ];
     write_json(FILE_REKENING, $rek);
-    $msg = 'Rekening baru berhasil dibuka.'; $cls = 'success';
+    header("Location: rekening.php?msg=" . urlencode('Rekening baru berhasil dibuka.'));
+    exit;
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['act'] ?? '') === 'topup') {
     $r = update_saldo(trim($_POST['no_rek']), (float)$_POST['jumlah'], 'KREDIT', 'Top up via admin', 'INTERNAL');
-    $msg = $r['message']; $cls = $r['success'] ? 'success' : 'danger';
+    $err = $r['success'] ? 0 : 1;
+    header("Location: rekening.php?msg=" . urlencode($r['message']) . "&err=" . $err);
+    exit;
 }
 
 $rekening = get_rekening();

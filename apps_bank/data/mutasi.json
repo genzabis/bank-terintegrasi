@@ -25,5 +25,32 @@
         "keterangan": "Pembayaran ecommerce",
         "sumber": "AppsEcommerce",
         "tanggal": "2026-06-17 11:34:38"
+    },
+    {
+        "id": "MUT20260622073554281",
+        "no_rek": "1007",
+        "tipe": "KREDIT",
+        "jumlah": 100000000000,
+        "keterangan": "Top up via admin",
+        "sumber": "INTERNAL",
+        "tanggal": "2026-06-22 07:35:54"
+    },
+    {
+        "id": "MUT20260622073649386",
+        "no_rek": "1007",
+        "tipe": "DEBIT",
+        "jumlah": 8900000,
+        "keterangan": "Transfer ke 1005 - Transfer",
+        "sumber": "INTERNAL",
+        "tanggal": "2026-06-22 07:36:49"
+    },
+    {
+        "id": "MUT20260622073649821",
+        "no_rek": "1005",
+        "tipe": "KREDIT",
+        "jumlah": 8900000,
+        "keterangan": "Transfer dari 1007 - Transfer",
+        "sumber": "INTERNAL",
+        "tanggal": "2026-06-22 07:36:49"
     }
 ]

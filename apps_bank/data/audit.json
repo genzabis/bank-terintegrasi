@@ -283,5 +283,70 @@
             "action": "rekening"
         },
         "tanggal": "2026-06-17 11:35:35"
+    },
+    {
+        "id": "AUD20260622071256387",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-22 07:12:56"
+    },
+    {
+        "id": "AUD20260622071543905",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-22 07:15:43"
+    },
+    {
+        "id": "AUD20260622074904203",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-22 07:49:04"
+    },
+    {
+        "id": "AUD20260622075038824",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-22 07:50:38"
+    },
+    {
+        "id": "AUD20260622075040681",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-22 07:50:40"
     }
 ]
