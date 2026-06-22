@@ -348,5 +348,44 @@
             "action": "rekening"
         },
         "tanggal": "2026-06-22 07:50:40"
+    },
+    {
+        "id": "AUD20260622075939270",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-22 07:59:39"
+    },
+    {
+        "id": "AUD20260622080344206",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-22 08:03:44"
+    },
+    {
+        "id": "AUD20260622080422397",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-22 08:04:22"
     }
 ]

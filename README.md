@@ -50,34 +50,11 @@ Setiap aplikasi menggunakan kredensial yang sama untuk login admin dan user demo
 ## 4. Arsitektur dan Alur Komunikasi
 Komunikasi data dilakukan secara langsung antar aplikasi (peer-to-peer) tanpa adanya perantara/broker data (No Hub/Broker).
 
-### Bagan Arsitektur (Full-Mesh)
+#### Bagan Arsitektur (Full-Mesh Multi-IP)
 ```
                     AppsDistribusi - Full-Mesh REST API
                     ====================================
 
-       ┌─────────────────────┐         ┌─────────────────────┐
-       │   AppsBank (A)      │<────────┤  AppsEcommerce (B)  │
-       │   localhost:8000    │  debit  │  localhost:8001     │
-       │                     │  json   │                     │
-       │ - rekening.json     │         │ - produk.json       │
-       │ - mutasi.json       │         │ - keranjang.json    │
-       └──┬──────────────┬───┘         │ - pesanan.json      │
-          │              │             └──┬──────────────┬───┘
-   debit  │              │ debit          │              │
-   json   │              │ json           │ pesan_tiket  │
-          │              │                │ bundle json  │
-          ▼              ▼                ▼              ▼
-       ┌──┴──────────────┴───┐         ┌──────────────────┴──┐
-       │ AppsPendidikan (C)  │────────>│   AppsTravel (D)    │
-       │ localhost:8002      │ voucher │   localhost:8003    │
-       │                     │ json    │                     │
-       │ - siswa.json        │         │ - tiket.json        │
-       │ - spp.json          │         │ - hotel.json        │
-       │ - produk_siswa.json │────────>│ - voucher.json      │
-       └─────────────────────┘ produk  │ - pesanan.json      │
-                               json     └─────────────────────┘
-                                        (Pendidikan->Ecommerce
-                                         kirim produk siswa)
 ```
 
 Setiap anak panah menggambarkan panggilan REST API (HTTP + JSON via cURL).
@@ -121,52 +98,30 @@ Sebelum menjalankan aplikasi, pastikan komputer Anda memenuhi syarat berikut:
    - Menunggu 3 detik sampai semua server siap menerima request.
    - Membuka browser bawaan ke 4 alamat URL aplikasi terdistribusi.
 
-### Metode B: Menjalankan Manual (Windows, Linux, macOS)
-Buka 4 terminal atau tab command line terpisah, atur environment variable `PHP_CLI_SERVER_WORKERS=4`, kemudian jalankan perintah berikut:
+### Metode B: Menjalankan Secara Terdistribusi (Beda Komputer / Jaringan WiFi)
+Jika Anda dan teman Anda ingin menyalakan masing-masing aplikasi di laptop yang berbeda:
 
-.\start_all.bat
+1. **Cari Tahu IP Anda**: Ketik `ipconfig` (Windows) atau `ifconfig` (Linux/Mac) di terminal dan catat IPv4 Address Anda (misal `10.10.4.127`).
+2. **Ubah Konfigurasi**: Buka `config.php` pada **semua aplikasi di semua komputer**, lalu ubah definisi konstanta URL (contoh: `BANK_URL`) sesuai dengan IP masing-masing komputer pemegang aplikasi tersebut.
+   ```php
+   // Contoh di config.php
+   define('BANK_URL',       'http://10.10.4.127:8000');
+   define('ECOMMERCE_URL',  'http://10.10.7.192:8001');
+   define('PENDIDIKAN_URL', 'http://10.10.4.167:8002');
+   define('TRAVEL_URL',     'http://10.10.4.127:8003');
+   ```
+3. **Jalankan Server Terbuka (Host 0.0.0.0)**:
+   Di komputer pemegang **AppsBank**:
+   ```bash
+   cd apps_bank && php -S 0.0.0.0:8000
+   ```
+   Di komputer pemegang **AppsEcommerce**:
+   ```bash
+   cd apps_ecommerce && php -S 0.0.0.0:8001
+   ```
+   *Penggunaan `0.0.0.0` wajib agar server PHP mengizinkan komputer lain di jaringan untuk mengakses aplikasi.*
 
-
-* **Terminal 1: AppsBank (Port 8000)**
-  ```bash
-  # Windows CMD
-  set PHP_CLI_SERVER_WORKERS=4
-  cd apps_bank && php -S localhost:8000
-
-  # Linux / macOS
-  export PHP_CLI_SERVER_WORKERS=4
-  cd apps_bank && php -S localhost:8000
-  ```
-* **Terminal 2: AppsEcommerce (Port 8001)**
-  ```bash
-  # Windows CMD
-  set PHP_CLI_SERVER_WORKERS=4
-  cd apps_ecommerce && php -S localhost:8001
-
-  # Linux / macOS
-  export PHP_CLI_SERVER_WORKERS=4
-  cd apps_ecommerce && php -S localhost:8001
-  ```
-* **Terminal 3: AppsPendidikan (Port 8002)**
-  ```bash
-  # Windows CMD
-  set PHP_CLI_SERVER_WORKERS=4
-  cd apps_pendidikan && php -S localhost:8002
-
-  # Linux / macOS
-  export PHP_CLI_SERVER_WORKERS=4
-  cd apps_pendidikan && php -S localhost:8002
-  ```
-* **Terminal 4: AppsTravel (Port 8003)**
-  ```bash
-  # Windows CMD
-  set PHP_CLI_SERVER_WORKERS=4
-  cd apps_travel && php -S localhost:8003
-
-  # Linux / macOS
-  export PHP_CLI_SERVER_WORKERS=4
-  cd apps_travel && php -S localhost:8003
-  ```
+4. **Firewall**: Pastikan Windows Defender / Firewall mengizinkan koneksi *inbound* untuk port yang digunakan (8000 - 8003).
 
 ### Cara Mematikan Layanan Server:
 * **Windows (Otomatis)**: Klik dua kali file `stop_all.bat` di dalam folder utama proyek, yang akan mematikan semua proses server `php.exe`.
