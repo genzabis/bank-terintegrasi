@@ -8,9 +8,10 @@ define('SISTEM_PORT', 8002);
 define('SISTEM_URL',  'http://10.10.4.167:8002');
 
 // URL sistem lain (full-mesh)
-define('BANK_URL',      'http://10.10.6.140:8000');
+
+define('BANK_URL',      'http://10.10.4.127:8000');
 define('ECOMMERCE_URL', 'http://10.10.7.192:8001');
-define('TRAVEL_URL',    'http://10.10.6.140:8003');
+define('TRAVEL_URL',    'http://10.10.4.127:8003');
 
 // Path data
 define('DATA_DIR',           __DIR__ . '/data');

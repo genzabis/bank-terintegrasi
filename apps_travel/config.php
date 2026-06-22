@@ -5,12 +5,12 @@
 define('SISTEM_NAMA', 'AppsTravel');
 define('SISTEM_KODE', 'D');
 define('SISTEM_PORT', 8003);
-define('SISTEM_URL',  'http://10.10.6.140:8003');
+define('SISTEM_URL',  'http://10.10.4.127:8003');
 
 // URL sistem lain (full-mesh)
-define('BANK_URL',       'http://10.10.6.140:8000');
-define('ECOMMERCE_URL',  'http://10.10.7.114:8001');
-define('PENDIDIKAN_URL', 'http://10.10.7.71:8002');
+define('BANK_URL',       'http://10.10.4.127:8000');
+define('ECOMMERCE_URL',  'http://10.10.7.192:8001');
+define('PENDIDIKAN_URL', 'http://10.10.4.167:8002');
 
 // Path data
 define('DATA_DIR',     __DIR__ . '/data');

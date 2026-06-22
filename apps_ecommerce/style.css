@@ -2,34 +2,37 @@
    AppsEcommerce · Light Modern Dashboard · Orange/Amber accent
    =================================================================== */
 :root {
-  --accent: #f97316;
-  --accent-2: #f59e0b;
-  --accent-soft: #fff7ed;
-  --accent-glow: rgba(249, 115, 22, 0.18);
+  /* ===== Pink Cream Blue Pastel ===== */
 
-  --bg: #fbf9f5;
-  --bg-elevated: #ffffff;
-  --bg-card: #ffffff;
-  --bg-card-hover: #fdf6ec;
-  --bg-sidebar: #ffffff;
+  --accent: #F8BBD9;      /* pink pastel */
+  --accent-2: #BFD7FF;    /* baby blue */
+  --accent-soft: #FFF5FA;
+  --accent-glow: rgba(248,187,217,.35);
 
-  --border: #ece8e0;
-  --border-strong: #d6d0c2;
+  --bg: #FFFDFC;          /* cream */
+  --bg-elevated: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FFF7FB;
+  --bg-sidebar: #FFF9FC;
 
-  --text: #1f1809;
-  --text-dim: #57452b;
-  --text-mute: #a89878;
+  --border: #EFDFF0;
+  --border-strong: #D8E7FF;
 
-  --success: #10b981;
-  --warning: #f59e0b;
-  --danger:  #ef4444;
-  --info:    #0ea5e9;
+  --text: #5D5A75;
+  --text-dim: #7B7692;
+  --text-mute: #AAA5C1;
 
-  --shadow-sm: 0 1px 2px rgba(31,24,9,.05);
-  --shadow:    0 4px 12px rgba(31,24,9,.06), 0 1px 3px rgba(31,24,9,.04);
-  --shadow-lg: 0 12px 32px rgba(31,24,9,.10);
-  --radius: 14px;
-  --radius-sm: 10px;
+  --success: #C7F0D8;
+  --warning: #FFE7C2;
+  --danger: #FFC9D6;
+  --info: #DDEBFF;
+
+  --shadow-sm: 0 4px 12px rgba(191,215,255,.10);
+  --shadow: 0 10px 30px rgba(248,187,217,.15);
+  --shadow-lg: 0 18px 45px rgba(191,215,255,.18);
+
+  --radius: 24px;
+  --radius-sm: 16px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }

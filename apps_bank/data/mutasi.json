@@ -1,1 +1,29 @@
-[]
+[
+    {
+        "id": "MUT20260617113156335",
+        "no_rek": "1006",
+        "tipe": "DEBIT",
+        "jumlah": 700000,
+        "keterangan": "Pembayaran ecommerce",
+        "sumber": "AppsEcommerce",
+        "tanggal": "2026-06-17 11:31:56"
+    },
+    {
+        "id": "MUT20260617113322611",
+        "no_rek": "1006",
+        "tipe": "DEBIT",
+        "jumlah": 1000000,
+        "keterangan": "SPP Maret 2026 - siswa S0001",
+        "sumber": "AppsPendidikan",
+        "tanggal": "2026-06-17 11:33:22"
+    },
+    {
+        "id": "MUT20260617113438330",
+        "no_rek": "1006",
+        "tipe": "DEBIT",
+        "jumlah": 350000,
+        "keterangan": "Pembayaran ecommerce",
+        "sumber": "AppsEcommerce",
+        "tanggal": "2026-06-17 11:34:38"
+    }
+]
