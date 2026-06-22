@@ -52,5 +52,41 @@
         "keterangan": "Transfer dari 1007 - Transfer",
         "sumber": "INTERNAL",
         "tanggal": "2026-06-22 07:36:49"
+    },
+    {
+        "id": "MUT20260622080450785",
+        "no_rek": "1001",
+        "tipe": "DEBIT",
+        "jumlah": 500000,
+        "keterangan": "SPP Maret 2026 - siswa S0001",
+        "sumber": "AppsPendidikan",
+        "tanggal": "2026-06-22 08:04:50"
+    },
+    {
+        "id": "MUT20260622080545418",
+        "no_rek": "1007",
+        "tipe": "DEBIT",
+        "jumlah": 500000,
+        "keterangan": "SPP Maret 2026 - siswa S0002",
+        "sumber": "AppsPendidikan",
+        "tanggal": "2026-06-22 08:05:45"
+    },
+    {
+        "id": "MUT20260622080607848",
+        "no_rek": "1007",
+        "tipe": "DEBIT",
+        "jumlah": 8620000,
+        "keterangan": "Pembayaran ecommerce",
+        "sumber": "AppsEcommerce",
+        "tanggal": "2026-06-22 08:06:07"
+    },
+    {
+        "id": "MUT20260622080813143",
+        "no_rek": "1006",
+        "tipe": "DEBIT",
+        "jumlah": 500000,
+        "keterangan": "SPP Maret 2026 - siswa S0004",
+        "sumber": "AppsPendidikan",
+        "tanggal": "2026-06-22 08:08:13"
     }
 ]
