@@ -1,1 +1,54 @@
-[]
+[
+    {
+        "id": "AUD20260617113328544",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/10.10.6.140:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 1006 Rp 1.000.000",
+        "payload": {
+            "no_rek": "1006",
+            "jumlah": 1000000
+        },
+        "tanggal": "2026-06-17 11:33:28"
+    },
+    {
+        "id": "AUD20260617113630527",
+        "arah": "OUT",
+        "peer": "AppsEcommerce",
+        "action": "add_produk",
+        "endpoint": "http:\/\/10.10.7.114:8001\/api.php?action=add_produk",
+        "ok": true,
+        "message": "Produk terdaftar id=P2026061711362926",
+        "payload": {
+            "nama": "Buku",
+            "harga": 50000,
+            "stok": 1,
+            "kategori": "siswa",
+            "deskripsi": "Karya siswa: Andi Pratama",
+            "sumber": "AppsPendidikan",
+            "asal_id": "PS2026061711361159"
+        },
+        "tanggal": "2026-06-17 11:36:30"
+    },
+    {
+        "id": "AUD20260617114055199",
+        "arah": "OUT",
+        "peer": "AppsEcommerce",
+        "action": "add_produk",
+        "endpoint": "http:\/\/10.10.7.114:8001\/api.php?action=add_produk",
+        "ok": true,
+        "message": "Produk terdaftar id=P2026061711405478",
+        "payload": {
+            "nama": "Buku",
+            "harga": 50000,
+            "stok": 1,
+            "kategori": "siswa",
+            "deskripsi": "Karya siswa: Andi Pratama",
+            "sumber": "AppsPendidikan",
+            "asal_id": "PS2026061711361159"
+        },
+        "tanggal": "2026-06-17 11:40:55"
+    }
+]

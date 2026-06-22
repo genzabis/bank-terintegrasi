@@ -28,5 +28,15 @@
         "dibuat": "2026-01-05 08:00:00",
         "dibayar_via": "1001",
         "waktu_bayar": "2026-05-20 08:28:42"
+    },
+    {
+        "id": "SPP2026061711331497",
+        "siswa_id": "S0001",
+        "bulan": "Maret 2026",
+        "jumlah": 1000000,
+        "status": "LUNAS",
+        "dibuat": "2026-06-17 11:33:14",
+        "dibayar_via": "1006",
+        "waktu_bayar": "2026-06-17 11:33:28"
     }
 ]

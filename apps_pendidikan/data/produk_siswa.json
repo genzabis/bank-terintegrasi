@@ -42,5 +42,16 @@
         "ecommerce_id": "P2026052008293073",
         "id": "PS2026052008292252",
         "dibuat": "2026-05-20 08:29:22"
+    },
+    {
+        "nama": "Buku",
+        "harga": 50000,
+        "stok": 1,
+        "siswa_id": "S0001",
+        "siswa_nama": "Andi Pratama",
+        "deskripsi": "apa",
+        "ecommerce_id": "P2026061711405478",
+        "id": "PS2026061711361159",
+        "dibuat": "2026-06-17 11:36:11"
     }
 ]
