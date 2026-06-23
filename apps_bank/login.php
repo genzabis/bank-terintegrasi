@@ -11,53 +11,76 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $err = $r['message'];
 }
 ?>
-<!doctype html><html lang="id"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Masuk · <?= SISTEM_NAMA ?></title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?= SISTEM_URL ?>/style.css">
-</head><body class="auth-body">
-<div class="auth-shell">
-  <div class="auth-side">
-    <div class="auth-side-inner">
-      <div class="brand-lg">
-        <div class="logo-lg"><?= SISTEM_KODE ?></div>
-        <div><div class="bold" style="font-size:1.15rem"><?= SISTEM_NAMA ?></div><div class="small" style="opacity:.85">Distributed Integration System</div></div>
-      </div>
-      <h1 style="font-size:1.85rem;line-height:1.2;margin:1.25rem 0 .65rem;letter-spacing:-.5px">Selamat datang kembali</h1>
-      <p style="opacity:.9;line-height:1.55;max-width:380px">Masuk untuk akses penuh ke <?= SISTEM_NAMA ?>. Sistem ini terhubung langsung ke 3 aplikasi lain via REST API: Bank, Ecommerce, Pendidikan, Travel.</p>
-      <div class="auth-tags mt-2">
-        <span class="auth-tag">REST API</span>
-        <span class="auth-tag">Full Mesh</span>
-        <span class="auth-tag">JSON Payload</span>
-        <span class="auth-tag">Realtime</span>
-      </div>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Masuk · <?= SISTEM_NAMA ?></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="<?= SISTEM_URL ?>/style.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-wrapper">
+    <div class="auth-header">
+      <img src="<?= SISTEM_URL ?>/img/logo.png" alt="Logo" class="auth-logo">
+      <h1 class="auth-title">Masuk ke <?= SISTEM_NAMA ?></h1>
+      <p class="auth-subtitle">Kelola ekosistem bank terdistribusi Anda</p>
     </div>
-  </div>
 
-  <div class="auth-form">
-    <div class="auth-form-inner">
-      <h2 style="font-size:1.45rem;margin:0 0 .35rem">Masuk</h2>
-      <p class="muted" style="margin:0 0 1.5rem">Belum punya akun? <a href="register.php">Daftar dulu</a></p>
-
-      <?php if ($err): ?><div class="alert danger"><i data-lucide="alert-circle"></i><div><?= htmlspecialchars($err) ?></div></div><?php endif; ?>
+    <div class="auth-card">
+      <?php if ($err): ?>
+        <div class="alert danger"><i data-lucide="alert-circle"></i><div><?= htmlspecialchars($err) ?></div></div>
+      <?php endif; ?>
 
       <form method="post">
         <input type="hidden" name="redirect" value="<?= htmlspecialchars($redirect) ?>">
-        <div class="field"><label>Username</label><input class="input" name="username" required autofocus placeholder="admin atau user"></div>
-        <div class="field"><label>Password</label><input class="input" type="password" name="password" required placeholder="••••••••"></div>
-        <button class="btn btn-primary btn-block btn-lg"><i data-lucide="log-in"></i>Masuk</button>
-      </form>
 
-      <div class="card-soft mt-2">
-        <div class="bold small mb">Akun demo</div>
-        <div class="small muted">Admin: <code>admin</code> / <code>admin123</code></div>
-        <div class="small muted">User: <code>user</code> / <code>user123</code></div>
-      </div>
+        <div class="auth-field">
+          <label for="username">Username</label>
+          <div class="input-icon-wrap">
+            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <input type="text" id="username" name="username" class="auth-input has-icon" required autofocus placeholder="Masukkan username">
+          </div>
+        </div>
+
+        <div class="auth-field">
+          <label for="password">Password</label>
+          <div class="input-icon-wrap">
+            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <input type="password" id="password" name="password" class="auth-input has-icon has-toggle" required placeholder="Masukkan password">
+            <button type="button" class="toggle-pw" onclick="togglePassword('password', this)" aria-label="Tampilkan password">
+              <svg class="eye-open" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg class="eye-closed" style="display:none" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="auth-btn">Masuk</button>
+      </form>
     </div>
+
+    <p class="auth-footer">Belum punya akun? <a href="register.php">Daftar dulu</a></p>
   </div>
-</div>
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-<script>if(window.lucide) lucide.createIcons();</script>
-</body></html>
+
+<script>
+function togglePassword(id, btn) {
+  var input = document.getElementById(id);
+  var open = btn.querySelector('.eye-open');
+  var closed = btn.querySelector('.eye-closed');
+  if (input.type === 'password') {
+    input.type = 'text';
+    open.style.display = 'none';
+    closed.style.display = 'block';
+  } else {
+    input.type = 'password';
+    open.style.display = 'block';
+    closed.style.display = 'none';
+  }
+}
+</script>
+</body>
+</html>

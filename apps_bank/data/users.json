@@ -1,18 +1,42 @@
 [
     {
         "username": "admin",
-        "nama": "Administrator AppsBank",
+        "nama": "Administrator",
         "email": "admin@apps.local",
-        "password": "$2y$10$bJoFWnrcJv3m4.9LXP2jIe3DQmJ6fODvLfUlQp.mtrZfRymiZNmHG",
+        "password": "$2y$10$vQld9G.7b6sqAQxveCawvud\/E\/TCEDcFMprvnnBqPjnDvshsM2zEW",
         "role": "admin",
-        "dibuat": "2026-05-20 08:46:10"
+        "dibuat": "2026-06-23 14:14:19"
     },
     {
-        "username": "user",
-        "nama": "Demo User",
-        "email": "user@apps.local",
-        "password": "$2y$10$sWjTQ7OeLr\/kbnM9UQLp.OtQpHfMB30oHoFbC1nOBHiNhiDANYyba",
+        "username": "niam",
+        "nama": "Niam",
+        "email": "niam@apps.local",
+        "password": "$2y$10$ITNROsEZBbrDlhir1oBvk.KCRKJ\/d0Bd7tayEFFgG0R0M.5wSzZQC",
         "role": "user",
-        "dibuat": "2026-05-20 08:46:10"
+        "dibuat": "2026-06-23 14:14:19"
+    },
+    {
+        "username": "isna",
+        "nama": "Isna",
+        "email": "isna@apps.local",
+        "password": "$2y$10$9LhVI3oavCgE7vKe3mNVNOvAT71eZH4UEBkQEy1H7rd3OF3snaSne",
+        "role": "user",
+        "dibuat": "2026-06-23 14:14:19"
+    },
+    {
+        "username": "linda",
+        "nama": "Linda",
+        "email": "linda@apps.local",
+        "password": "$2y$10$u7LIAMoNvIpDaJIqHj6lMeWZDb.cDBL7gDe6MUYjkBW6iagE8He9u",
+        "role": "user",
+        "dibuat": "2026-06-23 14:14:19"
+    },
+    {
+        "username": "osama",
+        "nama": "Osama",
+        "email": "osama@apps.local",
+        "password": "$2y$10$mExedJz4dvWvomDhcoPmDenERp.wq7SqY\/awJbIgUhpji9isf2bw6",
+        "role": "user",
+        "dibuat": "2026-06-23 14:14:19"
     }
 ]

@@ -1,44 +1,30 @@
 [
     {
-        "no_rek": "1001",
-        "nama": "Budi Santoso",
-        "saldo": 4500000,
-        "dibuat": "2026-01-10 09:00:00"
+        "no_rek": "100010001",
+        "nama": "Niam",
+        "username": "niam",
+        "saldo": 9810000,
+        "dibuat": "2026-06-23 14:14:19"
     },
     {
-        "no_rek": "1002",
-        "nama": "Siti Aminah",
-        "saldo": 3500000,
-        "dibuat": "2026-01-10 09:05:00"
-    },
-    {
-        "no_rek": "1003",
-        "nama": "PT Ecommerce Jaya",
-        "saldo": 10000000,
-        "dibuat": "2026-01-10 09:10:00"
-    },
-    {
-        "no_rek": "1004",
-        "nama": "Sekolah Nusantara",
-        "saldo": 7500000,
-        "dibuat": "2026-01-10 09:15:00"
-    },
-    {
-        "no_rek": "1005",
-        "nama": "Travel Indo",
-        "saldo": 16900000,
-        "dibuat": "2026-01-10 09:20:00"
-    },
-    {
-        "no_rek": "1006",
+        "no_rek": "100010002",
         "nama": "Isna",
-        "saldo": 117450000,
-        "dibuat": "2026-06-17 11:31:23"
+        "username": "isna",
+        "saldo": 10100000,
+        "dibuat": "2026-06-23 14:14:19"
     },
     {
-        "no_rek": "1007",
-        "nama": "niam",
-        "saldo": 1.00000009998198e+18,
-        "dibuat": "2026-06-22 07:35:44"
+        "no_rek": "100010003",
+        "nama": "Linda",
+        "username": "linda",
+        "saldo": 10090000,
+        "dibuat": "2026-06-23 14:14:19"
+    },
+    {
+        "no_rek": "100010004",
+        "nama": "Osama",
+        "username": "osama",
+        "saldo": 10000000,
+        "dibuat": "2026-06-23 14:14:19"
     }
 ]

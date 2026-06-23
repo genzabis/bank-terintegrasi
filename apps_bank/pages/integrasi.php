@@ -14,7 +14,7 @@ foreach ($audit as $a) {
     }
 }
 
-layout_start('Monitor Integrasi', 'Live status dan log komunikasi REST API antar 4 sistem');
+layout_start('Monitor Integrasi', 'Live status dan log komunikasi REST API antar 4 sistem', true);
 ?>
 
 <div class="row cols-3 mb-2">

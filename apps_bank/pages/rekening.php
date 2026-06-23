@@ -7,35 +7,47 @@ if (isset($_GET['msg'])) {
     $cls = $_GET['err'] ?? 0 ? 'danger' : 'success';
 }
 
+$u = current_user();
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['act'] ?? '') === 'add') {
     $no_rek = trim($_POST['no_rek']);
     $nama   = trim($_POST['nama']);
     $saldo  = (float)$_POST['saldo'];
+    if ($saldo < 0) {
+        header("Location: rekening.php?msg=" . urlencode('Gagal: Saldo awal tidak boleh negatif') . "&err=1"); exit;
+    }
 
     if (find_rekening($no_rek)) {
         header("Location: rekening.php?msg=" . urlencode('Gagal: Nomor rekening sudah terdaftar!') . "&err=1");
         exit;
     }
 
-    $rek = get_rekening();
+    // Pakai read_json langsung agar dapat semua data sebelum ditambah
+    $rek = read_json(FILE_REKENING);
     $rek[] = [
-        'no_rek' => $no_rek,
-        'nama'   => $nama,
-        'saldo'  => $saldo,
-        'dibuat' => date('Y-m-d H:i:s'),
+        'no_rek'   => $no_rek,
+        'nama'     => $nama,
+        'username' => $u['username'],
+        'saldo'    => $saldo,
+        'dibuat'   => date('Y-m-d H:i:s'),
     ];
     write_json(FILE_REKENING, $rek);
     header("Location: rekening.php?msg=" . urlencode('Rekening baru berhasil dibuka.'));
     exit;
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['act'] ?? '') === 'topup') {
-    $r = update_saldo(trim($_POST['no_rek']), (float)$_POST['jumlah'], 'KREDIT', 'Top up via admin', 'INTERNAL');
+    $jumlah = (float)$_POST['jumlah'];
+    if ($jumlah <= 0) {
+        header("Location: rekening.php?msg=" . urlencode('Jumlah top up harus lebih dari 0') . "&err=1"); exit;
+    }
+    $r = update_saldo(trim($_POST['no_rek']), $jumlah, 'KREDIT', 'Top up via mandiri', 'INTERNAL');
     $err = $r['success'] ? 0 : 1;
     header("Location: rekening.php?msg=" . urlencode($r['message']) . "&err=" . $err);
     exit;
 }
 
-$rekening = get_rekening();
+$is_adm = is_admin();
+$rekening = get_rekening($is_adm ? null : $u['username']);
 layout_start('Rekening', 'Kelola rekening, buka akun baru, dan top-up saldo');
 ?>
 

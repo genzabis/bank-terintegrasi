@@ -10,8 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['act'] ?? '') === 'toggle')
     toggle_kartu($_POST['id']); $msg = 'Status kartu diperbarui'; $cls='info';
 }
 
-$kartu    = get_kartu();
-$rekening = get_rekening();
+$u = current_user();
+$is_adm = is_admin();
+$kartu    = get_kartu($is_adm ? null : $u['username']);
+$rekening = get_rekening($is_adm ? null : $u['username']);
 layout_start('Kartu Debit', 'Terbitkan dan kelola kartu debit untuk setiap rekening');
 ?>
 

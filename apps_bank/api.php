@@ -67,6 +67,7 @@ switch ($action) {
         $ket  = $input['keterangan'] ?? 'Transfer';
         if (!$dari || !$ke || $amt <= 0) reply(['success'=>false,'message'=>'Parameter tidak lengkap'], 400);
         if ($dari === $ke) reply(['success'=>false,'message'=>'Rekening asal & tujuan sama'], 400);
+        if (!find_rekening($ke)) reply(['success'=>false,'message'=>'Rekening tujuan tidak valid'], 400);
 
         $r1 = update_saldo($dari, $amt, 'DEBIT',  "Transfer ke $ke - $ket", 'INTERNAL');
         if (!$r1['success']) reply($r1, 400);

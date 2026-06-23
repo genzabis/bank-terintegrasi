@@ -8,8 +8,11 @@ if (session_status() === PHP_SESSION_NONE) {
 function ensure_users_seed(): void {
     if (file_exists(FILE_USERS)) return;
     $seed = [
-        ['username'=>'admin','nama'=>'Administrator '.SISTEM_NAMA,'email'=>'admin@apps.local','password'=>password_hash('admin123', PASSWORD_DEFAULT),'role'=>'admin','dibuat'=>date('Y-m-d H:i:s')],
-        ['username'=>'user', 'nama'=>'Demo User',                  'email'=>'user@apps.local', 'password'=>password_hash('user123',  PASSWORD_DEFAULT),'role'=>'user', 'dibuat'=>date('Y-m-d H:i:s')],
+        ['username'=>'admin','nama'=>'Administrator','email'=>'admin@apps.local','password'=>password_hash('admin', PASSWORD_DEFAULT),'role'=>'admin','dibuat'=>date('Y-m-d H:i:s')],
+        ['username'=>'niam','nama'=>'Niam','email'=>'niam@apps.local','password'=>password_hash('niam', PASSWORD_DEFAULT),'role'=>'user','dibuat'=>date('Y-m-d H:i:s')],
+        ['username'=>'isna','nama'=>'Isna','email'=>'isna@apps.local','password'=>password_hash('isna', PASSWORD_DEFAULT),'role'=>'user','dibuat'=>date('Y-m-d H:i:s')],
+        ['username'=>'linda','nama'=>'Linda','email'=>'linda@apps.local','password'=>password_hash('linda', PASSWORD_DEFAULT),'role'=>'user','dibuat'=>date('Y-m-d H:i:s')],
+        ['username'=>'osama','nama'=>'Osama','email'=>'osama@apps.local','password'=>password_hash('osama', PASSWORD_DEFAULT),'role'=>'user','dibuat'=>date('Y-m-d H:i:s')],
     ];
     write_json(FILE_USERS, $seed);
 }
@@ -38,6 +41,7 @@ function login_user(string $username, string $password): array {
     $u = find_user($username);
     if (!$u) return ['success'=>false,'message'=>'Username tidak ditemukan'];
     if (!password_verify($password, $u['password'])) return ['success'=>false,'message'=>'Password salah'];
+    session_regenerate_id(true);
     $_SESSION['user'] = ['username'=>$u['username'],'nama'=>$u['nama'],'role'=>$u['role']];
     return ['success'=>true,'message'=>'Login sukses','data'=>$_SESSION['user']];
 }

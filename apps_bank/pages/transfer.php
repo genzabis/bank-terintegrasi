@@ -17,6 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif ($dari === $ke) { 
         header("Location: transfer.php?msg=" . urlencode('Rekening asal & tujuan sama') . "&err=1"); exit;
     } else {
+        $rek_tujuan = find_rekening($ke);
+        if (!$rek_tujuan) {
+            header("Location: transfer.php?msg=" . urlencode('Rekening tujuan tidak valid') . "&err=1"); exit;
+        }
         $r1 = update_saldo($dari, $amt, 'DEBIT', "Transfer ke $ke - $ket", 'INTERNAL');
         if (!$r1['success']) { 
             header("Location: transfer.php?msg=" . urlencode($r1['message']) . "&err=1"); exit;
@@ -26,7 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-$rekening = get_rekening();
+
+$u = current_user();
+$is_adm = is_admin();
+$rekening_saya = get_rekening($is_adm ? null : $u['username']);
+$rekening_semua = get_rekening();
 layout_start('Transfer Antar Rekening', 'Pindahkan dana antar rekening internal Bank');
 ?>
 
@@ -45,7 +53,7 @@ layout_start('Transfer Antar Rekening', 'Pindahkan dana antar rekening internal 
         <div class="field"><label>Dari</label>
           <select class="input" name="dari" required>
             <option value="">-- pilih --</option>
-            <?php foreach ($rekening as $r): ?>
+            <?php foreach ($rekening_saya as $r): ?>
               <option value="<?= htmlspecialchars($r['no_rek']) ?>"><?= htmlspecialchars($r['no_rek'].' · '.$r['nama'].' ('.format_rupiah($r['saldo']).')') ?></option>
             <?php endforeach; ?>
           </select>
@@ -53,7 +61,7 @@ layout_start('Transfer Antar Rekening', 'Pindahkan dana antar rekening internal 
         <div class="field"><label>Ke</label>
           <select class="input" name="ke" required>
             <option value="">-- pilih --</option>
-            <?php foreach ($rekening as $r): ?>
+            <?php foreach ($rekening_semua as $r): ?>
               <option value="<?= htmlspecialchars($r['no_rek']) ?>"><?= htmlspecialchars($r['no_rek'].' · '.$r['nama']) ?></option>
             <?php endforeach; ?>
           </select>

@@ -1,11 +1,23 @@
 <?php
 require_once __DIR__ . '/../_layout.php';
 
+$u = current_user();
+$is_adm = is_admin();
+$usr = $u['username'];
+
+$rekening = get_rekening($is_adm ? null : $usr);
+$my_reks = array_column($rekening, 'no_rek');
+
 $filterRek = $_GET['no_rek'] ?? '';
+if ($filterRek && !in_array($filterRek, $my_reks)) $filterRek = '';
+
 $filterTipe = $_GET['tipe'] ?? '';
 $mutasi = get_mutasi($filterRek ?: null);
+
+if (!$is_adm && !$filterRek) {
+    $mutasi = array_values(array_filter($mutasi, fn($m) => in_array($m['no_rek'], $my_reks)));
+}
 if ($filterTipe) $mutasi = array_values(array_filter($mutasi, fn($m)=>$m['tipe']===$filterTipe));
-$rekening = get_rekening();
 
 layout_start('Mutasi · Histori Transaksi', 'Filter dan telusuri pergerakan dana setiap rekening');
 ?>

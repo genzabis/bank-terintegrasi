@@ -23,7 +23,7 @@ function layout_start(string $title, string $subtitle = '', bool $admin_only = f
   <div class="sidebar-overlay" onclick="document.body.classList.remove('sidebar-open')"></div>
   <aside class="sidebar">
     <div class="brand">
-      <div class="logo"><?= SISTEM_KODE ?></div>
+      <img src="<?= SISTEM_URL ?>/img/logo.png" class="logo" alt="Logo">
       <div>
         <h1><?= SISTEM_NAMA ?></h1>
         <small>Sistem A · :<?= SISTEM_PORT ?></small>
@@ -34,7 +34,9 @@ function layout_start(string $title, string $subtitle = '', bool $admin_only = f
     <div class="nav-section">
       <div class="nav-title">Dashboard</div>
       <a class="nav-link <?= $cur==='index.php'?'active':'' ?>"     href="<?= SISTEM_URL ?>/index.php"><i data-lucide="layout-dashboard"></i>Beranda</a>
+      <?php if (is_admin()): ?>
       <a class="nav-link <?= $cur==='integrasi.php'?'active':'' ?>" href="<?= SISTEM_URL ?>/pages/integrasi.php"><i data-lucide="git-branch"></i>Monitor Integrasi</a>
+      <?php endif; ?>
     </div>
 
     <div class="nav-section">
@@ -63,7 +65,7 @@ function layout_start(string $title, string $subtitle = '', bool $admin_only = f
       <div class="avatar"><?= inisial_nama($u['nama']) ?></div>
       <div style="flex:1;min-width:0">
         <div class="bold small" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap"><?= htmlspecialchars($u['nama']) ?></div>
-        <div class="muted" style="font-size:.7rem"><?= htmlspecialchars($u['username']) ?> · <?= $u['role']==='admin'?'<span class="badge badge-accent" style="padding:1px 5px;font-size:.6rem">ADMIN</span>':'user' ?></div>
+        <div class="muted" style="font-size:.7rem"><?= htmlspecialchars($u['username']) ?> · <?= is_admin()?'<span class="badge badge-accent" style="padding:1px 5px;font-size:.6rem">ADMIN</span>':'Nasabah' ?></div>
       </div>
       <a href="<?= SISTEM_URL ?>/logout.php" class="icon-btn" title="Logout"><i data-lucide="log-out"></i></a>
     </div>
