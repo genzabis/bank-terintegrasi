@@ -36,9 +36,9 @@ graph TD
     User -->|2. Bayar SPP| Edu[Laptop Teman B\nAppsPendidikan]
     User -->|3. Beli Tiket Pesawat| Trv[Laptop Teman C\nAppsTravel]
     
-    Ecom -->|HTTP POST JSON\n(action=debit)| Bank[Laptop Anda\nAppsBank / Central]
-    Edu  -->|HTTP POST JSON\n(action=debit)| Bank
-    Trv  -->|HTTP POST JSON\n(action=debit)| Bank
+    Ecom -->|HTTP POST JSON action=debit| Bank[Laptop Anda\nAppsBank / Central]
+    Edu  -->|HTTP POST JSON action=debit| Bank
+    Trv  -->|HTTP POST JSON action=debit| Bank
     
     Bank -->|Validasi & Potong Saldo| DB[(Database JSON)]
     Bank -.->|Response JSON| Ecom
