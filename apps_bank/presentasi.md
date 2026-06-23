@@ -32,16 +32,23 @@ Jelaskan bagaimana laptop Anda dan laptop teman Anda saling berkomunikasi.
 
 ```mermaid
 graph TD
-    User([User / Pembeli]) -->|1. Checkout Barang| Ecom[Laptop Teman\nSistem Ecommerce]
-    Ecom -->|2. HTTP POST JSON\naction=debit, no_rek=XXX| Bank[Laptop Anda\nAppsBank / Central]
+    User([Nasabah / User]) -->|1. Belanja Barang| Ecom[Laptop Teman A\nAppsEcommerce]
+    User -->|2. Bayar SPP| Edu[Laptop Teman B\nAppsPendidikan]
+    User -->|3. Beli Tiket Pesawat| Trv[Laptop Teman C\nAppsTravel]
     
-    Bank -->|3. Validasi & Potong Saldo| DB[(Database JSON)]
-    Bank -->|4. Response JSON\nsuccess: true| Ecom
+    Ecom -->|HTTP POST JSON\n(action=debit)| Bank[Laptop Anda\nAppsBank / Central]
+    Edu  -->|HTTP POST JSON\n(action=debit)| Bank
+    Trv  -->|HTTP POST JSON\n(action=debit)| Bank
     
-    User -->|5. Buka Dashboard Bank\nCek Saldo Berkurang| Bank
+    Bank -->|Validasi & Potong Saldo| DB[(Database JSON)]
+    Bank -.->|Response JSON| Ecom
+    Bank -.->|Response JSON| Edu
+    Bank -.->|Response JSON| Trv
     
     style Bank fill:#1e293b,stroke:#fff,stroke-width:2px,color:#fff
     style Ecom fill:#ff8c42,stroke:#fff,stroke-width:2px,color:#fff
+    style Edu fill:#3b82f6,stroke:#fff,stroke-width:2px,color:#fff
+    style Trv fill:#a855f7,stroke:#fff,stroke-width:2px,color:#fff
     style DB fill:#10b981,stroke:#fff,stroke-width:2px,color:#fff
 ```
 
