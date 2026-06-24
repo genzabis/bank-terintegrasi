@@ -546,5 +546,1010 @@
             "action": "rekening"
         },
         "tanggal": "2026-06-22 08:08:13"
+    },
+    {
+        "id": "AUD20260624073839410",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:38:39"
+    },
+    {
+        "id": "AUD20260624073853386",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:38:53"
+    },
+    {
+        "id": "AUD20260624073956684",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:39:56"
+    },
+    {
+        "id": "AUD20260624074044918",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:40:44"
+    },
+    {
+        "id": "AUD20260624074147904",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:41:47"
+    },
+    {
+        "id": "AUD20260624074217774",
+        "arah": "IN",
+        "peer": "AppsPendidikan",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 500000,
+            "keterangan": "SPP Maret 2026 - siswa S0003",
+            "sumber": "AppsPendidikan"
+        },
+        "tanggal": "2026-06-24 07:42:17"
+    },
+    {
+        "id": "AUD20260624074217813",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:42:17"
+    },
+    {
+        "id": "AUD20260624074223629",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:42:23"
+    },
+    {
+        "id": "AUD20260624074248667",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:42:48"
+    },
+    {
+        "id": "AUD20260624074337324",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:43:37"
+    },
+    {
+        "id": "AUD20260624074428736",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:44:28"
+    },
+    {
+        "id": "AUD20260624074506199",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:45:06"
+    },
+    {
+        "id": "AUD20260624074518451",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:45:18"
+    },
+    {
+        "id": "AUD20260624074518151",
+        "arah": "IN",
+        "peer": "AppsTravel",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 850000,
+            "keterangan": "Tiket Tiket Pesawat Jakarta - Bali x1",
+            "sumber": "AppsTravel"
+        },
+        "tanggal": "2026-06-24 07:45:18"
+    },
+    {
+        "id": "AUD20260624074538404",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:45:38"
+    },
+    {
+        "id": "AUD20260624074613849",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:46:13"
+    },
+    {
+        "id": "AUD20260624074623907",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:46:23"
+    },
+    {
+        "id": "AUD20260624074626312",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:46:26"
+    },
+    {
+        "id": "AUD20260624074626592",
+        "arah": "IN",
+        "peer": "AppsTravel",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010003",
+            "jumlah": 750000,
+            "keterangan": "Hotel Hotel Mutiara Bali x1 malam",
+            "sumber": "AppsTravel"
+        },
+        "tanggal": "2026-06-24 07:46:26"
+    },
+    {
+        "id": "AUD20260624074641309",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 07:46:41"
+    },
+    {
+        "id": "AUD20260624081704859",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 08:17:04"
+    },
+    {
+        "id": "AUD20260624081716670",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 08:17:16"
+    },
+    {
+        "id": "AUD20260624081717665",
+        "arah": "IN",
+        "peer": "AppsEcommerce",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 700000,
+            "keterangan": "Pembayaran ecommerce",
+            "sumber": "AppsEcommerce"
+        },
+        "tanggal": "2026-06-24 08:17:17"
+    },
+    {
+        "id": "AUD20260624081717127",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 08:17:17"
+    },
+    {
+        "id": "AUD20260624081739351",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 08:17:39"
+    },
+    {
+        "id": "AUD20260624081745713",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 08:17:45"
+    },
+    {
+        "id": "AUD20260624081745438",
+        "arah": "IN",
+        "peer": "AppsEcommerce",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 250000,
+            "keterangan": "Pembayaran ecommerce",
+            "sumber": "AppsEcommerce"
+        },
+        "tanggal": "2026-06-24 08:17:45"
+    },
+    {
+        "id": "AUD20260624082012781",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 08:20:12"
+    },
+    {
+        "id": "AUD20260624082029371",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 08:20:29"
+    },
+    {
+        "id": "AUD20260624082039284",
+        "arah": "IN",
+        "peer": "AppsPendidikan",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 500000,
+            "keterangan": "SPP Maret 2026 - siswa S0001",
+            "sumber": "AppsPendidikan"
+        },
+        "tanggal": "2026-06-24 08:20:39"
+    },
+    {
+        "id": "AUD20260624082039352",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 08:20:39"
+    },
+    {
+        "id": "AUD20260624082058568",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 08:20:58"
+    },
+    {
+        "id": "AUD20260624082131829",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 08:21:31"
+    },
+    {
+        "id": "AUD20260624101904797",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:19:04"
+    },
+    {
+        "id": "AUD20260624101908734",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:19:08"
+    },
+    {
+        "id": "AUD20260624101908378",
+        "arah": "IN",
+        "peer": "AppsEcommerce",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 350000,
+            "keterangan": "Pembayaran ecommerce",
+            "sumber": "AppsEcommerce"
+        },
+        "tanggal": "2026-06-24 10:19:08"
+    },
+    {
+        "id": "AUD20260624101956602",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:19:56"
+    },
+    {
+        "id": "AUD20260624102008701",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:20:08"
+    },
+    {
+        "id": "AUD20260624102203420",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:22:03"
+    },
+    {
+        "id": "AUD20260624102210393",
+        "arah": "IN",
+        "peer": "AppsPendidikan",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 1000000,
+            "keterangan": "SPP Juni 2026 - siswa S0001",
+            "sumber": "AppsPendidikan"
+        },
+        "tanggal": "2026-06-24 10:22:10"
+    },
+    {
+        "id": "AUD20260624102210699",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:22:10"
+    },
+    {
+        "id": "AUD20260624102408738",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:24:08"
+    },
+    {
+        "id": "AUD20260624102422970",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:24:22"
+    },
+    {
+        "id": "AUD20260624103104688",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:31:04"
+    },
+    {
+        "id": "AUD20260624103109384",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:31:09"
+    },
+    {
+        "id": "AUD20260624103118154",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:31:18"
+    },
+    {
+        "id": "AUD20260624103140411",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:31:40"
+    },
+    {
+        "id": "AUD20260624103340891",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:33:40"
+    },
+    {
+        "id": "AUD20260624103359166",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:33:59"
+    },
+    {
+        "id": "AUD20260624103412343",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:34:12"
+    },
+    {
+        "id": "AUD20260624103637604",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:36:37"
+    },
+    {
+        "id": "AUD20260624103640693",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:36:40"
+    },
+    {
+        "id": "AUD20260624103648760",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:36:48"
+    },
+    {
+        "id": "AUD20260624104145960",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:41:45"
+    },
+    {
+        "id": "AUD20260624104154416",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:41:54"
+    },
+    {
+        "id": "AUD20260624105514652",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:55:14"
+    },
+    {
+        "id": "AUD20260624105521260",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:55:21"
+    },
+    {
+        "id": "AUD20260624105521385",
+        "arah": "IN",
+        "peer": "AppsEcommerce",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 250000,
+            "keterangan": "Pembayaran ecommerce",
+            "sumber": "AppsEcommerce"
+        },
+        "tanggal": "2026-06-24 10:55:21"
+    },
+    {
+        "id": "AUD20260624105530695",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:55:30"
+    },
+    {
+        "id": "AUD20260624105538115",
+        "arah": "IN",
+        "peer": "AppsPendidikan",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 10000,
+            "keterangan": "SPP Juni 2026 - siswa S0004",
+            "sumber": "AppsPendidikan"
+        },
+        "tanggal": "2026-06-24 10:55:38"
+    },
+    {
+        "id": "AUD20260624105538517",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 10:55:38"
+    },
+    {
+        "id": "AUD20260624112519546",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 11:25:19"
+    },
+    {
+        "id": "AUD20260624112526613",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 11:25:26"
+    },
+    {
+        "id": "AUD20260624112527319",
+        "arah": "IN",
+        "peer": "AppsEcommerce",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 350000,
+            "keterangan": "Pembayaran ecommerce",
+            "sumber": "AppsEcommerce"
+        },
+        "tanggal": "2026-06-24 11:25:27"
+    },
+    {
+        "id": "AUD20260624113728494",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 11:37:28"
+    },
+    {
+        "id": "AUD20260624113732122",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 11:37:32"
+    },
+    {
+        "id": "AUD20260624113732418",
+        "arah": "IN",
+        "peer": "AppsEcommerce",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 75000,
+            "keterangan": "Pembayaran ecommerce",
+            "sumber": "AppsEcommerce"
+        },
+        "tanggal": "2026-06-24 11:37:32"
+    },
+    {
+        "id": "AUD20260624113747866",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 11:37:47"
+    },
+    {
+        "id": "AUD20260624113750647",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 11:37:50"
+    },
+    {
+        "id": "AUD20260624113751778",
+        "arah": "IN",
+        "peer": "AppsEcommerce",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 1920000,
+            "keterangan": "Pembayaran ecommerce",
+            "sumber": "AppsEcommerce"
+        },
+        "tanggal": "2026-06-24 11:37:51"
+    },
+    {
+        "id": "AUD20260624114318604",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 11:43:18"
+    },
+    {
+        "id": "AUD20260624114324253",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "rekening",
+        "endpoint": "GET \/api.php?action=rekening",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "rekening"
+        },
+        "tanggal": "2026-06-24 11:43:24"
+    },
+    {
+        "id": "AUD20260624114325407",
+        "arah": "IN",
+        "peer": "AppsEcommerce",
+        "action": "debit",
+        "endpoint": "POST \/api.php?action=debit",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "debit",
+            "no_rek": "100010001",
+            "jumlah": 350000,
+            "keterangan": "Pembayaran ecommerce",
+            "sumber": "AppsEcommerce"
+        },
+        "tanggal": "2026-06-24 11:43:25"
     }
 ]

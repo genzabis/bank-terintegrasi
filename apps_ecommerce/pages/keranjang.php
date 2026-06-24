@@ -1,12 +1,14 @@
 <?php
 require_once __DIR__ . '/../_layout.php';
 
+$uname = current_user()['username'] ?? 'guest';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['act'] ?? '') === 'remove') {
-    hapus_item_keranjang('guest', $_POST['produk_id']);
+    hapus_item_keranjang($uname, $_POST['produk_id']);
+    set_flash_msg('Item dihapus dari keranjang', 'success');
     header('Location: keranjang.php'); exit;
 }
 
-$cart = get_keranjang('guest');
+$cart = get_keranjang($uname);
 $rows = []; $total = 0;
 foreach ($cart as $it) {
     $p = find_produk($it['produk_id']);

@@ -74,14 +74,19 @@ function add_siswa(array $s): array {
 function get_spp(): array { return read_json(FILE_SPP); }
 function tambah_tagihan_spp(string $siswa_id, float $jumlah, string $bulan): array {
     $list = get_spp();
+    foreach ($list as $s) {
+        if ($s['siswa_id'] === $siswa_id && strcasecmp(trim($s['bulan']), trim($bulan)) === 0) {
+            return ['success' => false, 'message' => 'Tagihan untuk bulan tersebut sudah ada'];
+        }
+    }
     $data = [
         'id'=>'SPP'.date('YmdHis').rand(10,99),
-        'siswa_id'=>$siswa_id,'bulan'=>$bulan,'jumlah'=>$jumlah,
+        'siswa_id'=>$siswa_id,'bulan'=>trim($bulan),'jumlah'=>$jumlah,
         'status'=>'BELUM','dibuat'=>date('Y-m-d H:i:s'),
     ];
     $list[] = $data;
     write_json(FILE_SPP, $list);
-    return $data;
+    return ['success' => true, 'data' => $data];
 }
 function set_spp_status(string $id, string $status, ?string $no_rek = null): void {
     $list = get_spp();

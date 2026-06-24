@@ -66,5 +66,89 @@
             "asal_id": "PS2026061711361159"
         },
         "tanggal": "2026-06-17 11:40:54"
+    },
+    {
+        "id": "AUD20260624101908468",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/localhost:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 100010001 Rp 350.000 sukses",
+        "payload": {
+            "no_rek": "100010001",
+            "jumlah": 350000
+        },
+        "tanggal": "2026-06-24 10:19:08"
+    },
+    {
+        "id": "AUD20260624105521689",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/localhost:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 100010001 Rp 250.000 sukses",
+        "payload": {
+            "no_rek": "100010001",
+            "jumlah": 250000
+        },
+        "tanggal": "2026-06-24 10:55:21"
+    },
+    {
+        "id": "AUD20260624112527946",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/localhost:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 100010001 Rp 350.000 sukses",
+        "payload": {
+            "no_rek": "100010001",
+            "jumlah": 350000
+        },
+        "tanggal": "2026-06-24 11:25:27"
+    },
+    {
+        "id": "AUD20260624113732989",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/localhost:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 100010001 Rp 75.000 sukses",
+        "payload": {
+            "no_rek": "100010001",
+            "jumlah": 75000
+        },
+        "tanggal": "2026-06-24 11:37:32"
+    },
+    {
+        "id": "AUD20260624113751378",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/localhost:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 100010001 Rp 1.920.000 sukses",
+        "payload": {
+            "no_rek": "100010001",
+            "jumlah": 1920000
+        },
+        "tanggal": "2026-06-24 11:37:51"
+    },
+    {
+        "id": "AUD20260624114325561",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/localhost:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 100010001 Rp 350.000 sukses",
+        "payload": {
+            "no_rek": "100010001",
+            "jumlah": 350000
+        },
+        "tanggal": "2026-06-24 11:43:25"
     }
 ]

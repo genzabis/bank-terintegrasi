@@ -1,11 +1,7 @@
 <?php
 require_once __DIR__ . '/../_layout.php';
 
-$msg = ''; $cls = '';
-if (isset($_GET['msg'])) {
-    $msg = $_GET['msg'];
-    $cls = $_GET['err'] ?? 0 ? 'danger' : 'success';
-}
+
 
 $u = current_user();
 
@@ -14,11 +10,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['act'] ?? '') === 'add') {
     $nama   = trim($_POST['nama']);
     $saldo  = (float)$_POST['saldo'];
     if ($saldo < 0) {
-        header("Location: rekening.php?msg=" . urlencode('Gagal: Saldo awal tidak boleh negatif') . "&err=1"); exit;
+        set_flash_msg('Gagal: Saldo awal tidak boleh negatif', 'danger');
+        header("Location: rekening.php"); exit;
     }
 
     if (find_rekening($no_rek)) {
-        header("Location: rekening.php?msg=" . urlencode('Gagal: Nomor rekening sudah terdaftar!') . "&err=1");
+        set_flash_msg('Gagal: Nomor rekening sudah terdaftar!', 'danger');
+        header("Location: rekening.php");
         exit;
     }
 
@@ -32,17 +30,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['act'] ?? '') === 'add') {
         'dibuat'   => date('Y-m-d H:i:s'),
     ];
     write_json(FILE_REKENING, $rek);
-    header("Location: rekening.php?msg=" . urlencode('Rekening baru berhasil dibuka.'));
+    set_flash_msg('Rekening baru berhasil dibuka.', 'success');
+    header("Location: rekening.php");
     exit;
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['act'] ?? '') === 'topup') {
     $jumlah = (float)$_POST['jumlah'];
     if ($jumlah <= 0) {
-        header("Location: rekening.php?msg=" . urlencode('Jumlah top up harus lebih dari 0') . "&err=1"); exit;
+        set_flash_msg('Jumlah top up harus lebih dari 0', 'danger');
+        header("Location: rekening.php"); exit;
     }
     $r = update_saldo(trim($_POST['no_rek']), $jumlah, 'KREDIT', 'Top up via mandiri', 'INTERNAL');
-    $err = $r['success'] ? 0 : 1;
-    header("Location: rekening.php?msg=" . urlencode($r['message']) . "&err=" . $err);
+    set_flash_msg($r['message'], $r['success'] ? 'success' : 'danger');
+    header("Location: rekening.php");
     exit;
 }
 
@@ -51,7 +51,7 @@ $rekening = get_rekening($is_adm ? null : $u['username']);
 layout_start('Rekening', 'Kelola rekening, buka akun baru, dan top-up saldo');
 ?>
 
-<?php if ($msg): ?><div class="alert <?= $cls ?>"><span class="ico">●</span><?= htmlspecialchars($msg) ?></div><?php endif; ?>
+
 
 <div class="row cols-2-1">
   <div class="card no-pad">

@@ -1,1 +1,33 @@
-[]
+[
+    {
+        "jenis": "TIKET",
+        "tiket_id": "T001",
+        "nama": "Tiket Pesawat Jakarta - Bali",
+        "qty": 1,
+        "harga_satuan": 850000,
+        "subtotal": 850000,
+        "diskon_persen": 0,
+        "total": 850000,
+        "pemesan": "niam",
+        "no_rek": "100010001",
+        "voucher": null,
+        "sumber": "WEB-PESAN",
+        "kode": "TKT-CACC0E",
+        "status": "LUNAS",
+        "id": "TPS2026062407451872",
+        "tanggal": "2026-06-24 07:45:18"
+    },
+    {
+        "jenis": "HOTEL",
+        "hotel_id": "H001",
+        "nama": "Hotel Mutiara Bali",
+        "malam": 1,
+        "total": 750000,
+        "pemesan": "linda",
+        "no_rek": "100010003",
+        "kode": "HTL-BDAD2C",
+        "status": "LUNAS",
+        "id": "TPS2026062407462651",
+        "tanggal": "2026-06-24 07:46:26"
+    }
+]

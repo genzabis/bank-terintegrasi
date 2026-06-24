@@ -1,31 +1,39 @@
 <?php
 require_once __DIR__ . '/../_layout.php';
 
-$msg=''; $cls='';
 if ($_SERVER['REQUEST_METHOD']==='POST' && ($_POST['act']??'')==='add') {
-    tambah_tagihan_spp($_POST['siswa_id'], (float)$_POST['jumlah'], $_POST['bulan']);
-    $msg='Tagihan SPP ditambahkan'; $cls='success';
+    $r = tambah_tagihan_spp($_POST['siswa_id'], (float)$_POST['jumlah'], $_POST['bulan']);
+    if (!empty($r['success'])) {
+        set_flash_msg('Tagihan SPP ditambahkan', 'success');
+    } else {
+        set_flash_msg($r['message'] ?? 'Gagal menambahkan tagihan', 'danger');
+    }
+    header('Location: spp.php'); exit;
 }
 if ($_SERVER['REQUEST_METHOD']==='POST' && ($_POST['act']??'')==='bayar') {
     $id=$_POST['spp_id']; $no=trim($_POST['no_rek']);
     $list=get_spp(); $tag=null;
     foreach ($list as $t) if ($t['id']===$id) { $tag=$t; break; }
-    if (!$tag) { $msg='Tagihan tidak ditemukan'; $cls='danger'; }
-    elseif ($tag['status']==='LUNAS') { $msg='Sudah lunas'; $cls='warning'; }
+    if (!$tag) { set_flash_msg('Tagihan tidak ditemukan', 'danger'); header('Location: spp.php'); exit; }
+    elseif ($tag['status']==='LUNAS') { set_flash_msg('Sudah lunas', 'warning'); header('Location: spp.php'); exit; }
     else {
         $r = bayar_via_bank($no, (float)$tag['jumlah'], "SPP {$tag['bulan']} - siswa {$tag['siswa_id']}");
-        if (!empty($r['success'])) { set_spp_status($id,'LUNAS',$no); $msg="SPP {$tag['bulan']} dilunasi · sisa saldo ".format_rupiah($r['saldo']??0); $cls='success'; }
-        else { $msg='Gagal: '.($r['message']??'-'); $cls='danger'; }
+        if (!empty($r['success'])) { set_spp_status($id,'LUNAS',$no); set_flash_msg("SPP {$tag['bulan']} dilunasi · sisa saldo ".format_rupiah($r['saldo']??0), 'success'); header('Location: spp.php'); exit; }
+        else { set_flash_msg('Gagal: '.($r['message']??'-'), 'danger'); header('Location: spp.php'); exit; }
     }
 }
 $spp=get_spp(); $siswa=get_siswa();
 $siswaMap=[]; foreach ($siswa as $s) $siswaMap[$s['id']]=$s;
 $rek = http_get(BANK_URL.'/api.php?action=rekening',3)['data'] ?? [];
+$user = current_user()['username'] ?? 'guest';
+if ($user !== 'guest') {
+    $rek = array_values(array_filter($rek, fn($r) => ($r['username'] ?? '') === $user));
+}
 
 layout_start('Pembayaran SPP', 'Lunasi tagihan SPP otomatis melalui debit Bank');
 ?>
 
-<?php if ($msg): ?><div class="alert <?= $cls ?>"><?= htmlspecialchars($msg) ?></div><?php endif; ?>
+
 
 <div class="row cols-2-1">
   <div class="card no-pad">

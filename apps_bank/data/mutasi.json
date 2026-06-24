@@ -70,5 +70,149 @@
         "keterangan": "Transfer dari 100010001 - Transfer",
         "sumber": "INTERNAL",
         "tanggal": "2026-06-23 16:28:03"
+    },
+    {
+        "id": "MUT20260624074217990",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 500000,
+        "keterangan": "SPP Maret 2026 - siswa S0003",
+        "sumber": "AppsPendidikan",
+        "tanggal": "2026-06-24 07:42:17"
+    },
+    {
+        "id": "MUT20260624074518650",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 850000,
+        "keterangan": "Tiket Tiket Pesawat Jakarta - Bali x1",
+        "sumber": "AppsTravel",
+        "tanggal": "2026-06-24 07:45:18"
+    },
+    {
+        "id": "MUT20260624074626976",
+        "no_rek": "100010003",
+        "tipe": "DEBIT",
+        "jumlah": 750000,
+        "keterangan": "Hotel Hotel Mutiara Bali x1 malam",
+        "sumber": "AppsTravel",
+        "tanggal": "2026-06-24 07:46:26"
+    },
+    {
+        "id": "MUT20260624081327433",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 100000,
+        "keterangan": "Transfer ke 100010002 - Transfer",
+        "sumber": "INTERNAL",
+        "tanggal": "2026-06-24 08:13:27"
+    },
+    {
+        "id": "MUT20260624081327901",
+        "no_rek": "100010002",
+        "tipe": "KREDIT",
+        "jumlah": 100000,
+        "keterangan": "Transfer dari 100010001 - Transfer",
+        "sumber": "INTERNAL",
+        "tanggal": "2026-06-24 08:13:27"
+    },
+    {
+        "id": "MUT20260624081717703",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 700000,
+        "keterangan": "Pembayaran ecommerce",
+        "sumber": "AppsEcommerce",
+        "tanggal": "2026-06-24 08:17:17"
+    },
+    {
+        "id": "MUT20260624081745744",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 250000,
+        "keterangan": "Pembayaran ecommerce",
+        "sumber": "AppsEcommerce",
+        "tanggal": "2026-06-24 08:17:45"
+    },
+    {
+        "id": "MUT20260624082039608",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 500000,
+        "keterangan": "SPP Maret 2026 - siswa S0001",
+        "sumber": "AppsPendidikan",
+        "tanggal": "2026-06-24 08:20:39"
+    },
+    {
+        "id": "MUT20260624101908121",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 350000,
+        "keterangan": "Pembayaran ecommerce",
+        "sumber": "AppsEcommerce",
+        "tanggal": "2026-06-24 10:19:08"
+    },
+    {
+        "id": "MUT20260624102210845",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 1000000,
+        "keterangan": "SPP Juni 2026 - siswa S0001",
+        "sumber": "AppsPendidikan",
+        "tanggal": "2026-06-24 10:22:10"
+    },
+    {
+        "id": "MUT20260624105521778",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 250000,
+        "keterangan": "Pembayaran ecommerce",
+        "sumber": "AppsEcommerce",
+        "tanggal": "2026-06-24 10:55:21"
+    },
+    {
+        "id": "MUT20260624105538704",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 10000,
+        "keterangan": "SPP Juni 2026 - siswa S0004",
+        "sumber": "AppsPendidikan",
+        "tanggal": "2026-06-24 10:55:38"
+    },
+    {
+        "id": "MUT20260624112527171",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 350000,
+        "keterangan": "Pembayaran ecommerce",
+        "sumber": "AppsEcommerce",
+        "tanggal": "2026-06-24 11:25:27"
+    },
+    {
+        "id": "MUT20260624113732189",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 75000,
+        "keterangan": "Pembayaran ecommerce",
+        "sumber": "AppsEcommerce",
+        "tanggal": "2026-06-24 11:37:32"
+    },
+    {
+        "id": "MUT20260624113751230",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 1920000,
+        "keterangan": "Pembayaran ecommerce",
+        "sumber": "AppsEcommerce",
+        "tanggal": "2026-06-24 11:37:51"
+    },
+    {
+        "id": "MUT20260624114325236",
+        "no_rek": "100010001",
+        "tipe": "DEBIT",
+        "jumlah": 350000,
+        "keterangan": "Pembayaran ecommerce",
+        "sumber": "AppsEcommerce",
+        "tanggal": "2026-06-24 11:43:25"
     }
 ]

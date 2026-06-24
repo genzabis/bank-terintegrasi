@@ -7,6 +7,7 @@ $reviews = $p ? get_review($p['id']) : [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['act'] ?? '') === 'review' && $p) {
     add_review($p['id'], trim($_POST['user'] ?: 'Tamu'), (int)$_POST['star'], trim($_POST['komentar']));
+    set_flash_msg('Ulasan berhasil dikirim', 'success');
     header('Location: produk.php?id='.urlencode($p['id'])); exit;
 }
 

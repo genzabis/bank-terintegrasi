@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../_layout.php';
 
-$user = 'guest';
+$user = current_user()['username'] ?? 'guest';
 $cart = get_keranjang($user);
 $items = []; $total = 0;
 foreach ($cart as $it) {
@@ -12,6 +12,9 @@ foreach ($cart as $it) {
 }
 
 $rekList = fetch_rekening_bank();
+if ($user !== 'guest') {
+    $rekList = array_values(array_filter($rekList, fn($r) => ($r['username'] ?? '') === $user));
+}
 
 $msg=''; $cls='';
 if ($_SERVER['REQUEST_METHOD']==='POST') {
@@ -30,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
             $r = proses_checkout($user, trim($_POST['no_rek']),
                 array_map(fn($it)=>['produk_id'=>$it['produk_id'],'qty'=>$it['qty']], $items),
                 $voucher, $diskonPct);
-            if (!empty($r['success'])) { header('Location: pesanan.php?ok=1'); exit; }
+            if (!empty($r['success'])) { set_flash_msg('Pembayaran berhasil! Saldo bank telah terdebit otomatis dan stok produk terupdate.', 'success'); header('Location: pesanan.php'); exit; }
             $msg = $r['message'] ?? 'Checkout gagal'; $cls='danger';
         }
     }

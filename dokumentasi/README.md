@@ -1,24 +1,65 @@
-# Dokumentasi AppsDistribusi
+# AppsDistribusi: Ekosistem Aplikasi Terdistribusi Berbasis REST API
 
-Folder ini berisi diagram dan laporan tugas. File biner (PNG/PDF) belum di-generate; di bawah ini disediakan versi **text-based** sebagai placeholder yang bisa dipakai untuk membuat versi PNG di tools seperti draw.io / Mermaid / Excalidraw.
-
-> Ganti file di bawah dengan PNG/PDF asli sebelum mengumpulkan tugas:
-> - `arsitektur.png` - Diagram arsitektur full-mesh 4 sistem
-> - `ERD.png` - Entity Relationship Diagram
-> - `flowchart.png` - Flowchart komunikasi REST
-> - `laporan.pdf` - Laporan tugas
+AppsDistribusi adalah sekumpulan empat aplikasi *web* mandiri yang terintegrasi penuh melalui arsitektur REST API berkonsep saling terhubung (Full-Mesh). Proyek ini mensimulasikan ekosistem transaksi terdistribusi dunia nyata, menghubungkan perbankan, toko online (ecommerce), akademik (pendidikan), dan biro perjalanan (travel).
 
 ---
 
-## 1. Diagram Arsitektur (text)
+## 🌟 Fitur Unggulan
 
-```
+1. **Arsitektur Independen Berbasis API** 
+   Setiap aplikasi berjalan secara mandiri dengan basis data lokal (`.json` flat-file) sendiri dan saling bertukar data/instruksi secara aman melalui HTTP REST API (cURL) antar-aplikasi.
+2. **Otentikasi Keamanan PIN Terpusat** 
+   Seluruh transaksi finansial di semua aplikasi kini dilindungi dengan modul *Security PIN* berbasis *interceptor JavaScript* asli (PIN Bawaan: **`12345`**).
+3. **Pencegahan Duplikasi Tagihan** 
+   Validasi ketat pada sistem tagihan SPP (Apps Pendidikan) yang mencegah penagihan/pembayaran ganda untuk bulan yang sama.
+4. **Sistem Notifikasi Post-Redirect-Get (PRG)** 
+   Memberikan _feedback_ visual kepada pengguna melalui pesan _toast_ (Berhasil, Gagal, Peringatan) di seluruh aplikasi tanpa risiko proses ulang saat melakukan *refresh*.
+5. **Tema Antarmuka Estetik** 
+   Tampilan *dashboard* modern menggunakan *CSS kustom* responsif dengan *micro-animations*, dilengkapi ikon [Lucide](https://lucide.dev) dan tema warna eksklusif per aplikasi:
+   - 🏦 **AppsBank**: Biru Kepercayaan (Trust Blue)
+   - 🛒 **AppsEcommerce**: Oren Menyala (Bold Orange/Amber)
+   - 🎓 **AppsPendidikan**: Ungu Elegan (Indigo)
+   - ✈️ **AppsTravel**: Cyan Tropis (Teal)
+
+---
+
+## 👥 Akun Pengujian (Testing)
+
+Semua sistem membagikan basis data identitas yang sinkron. Anda dapat masuk *(login)* menggunakan akun-akun berikut:
+
+- **niam** (Password: `123` | Role: Admin)
+- **isna** (Password: `123` | Role: User)
+- **linda** (Password: `123` | Role: User)
+
+> **Catatan Keamanan Transaksi:**
+> Setiap kali akan melakukan *Checkout*, Pesan Tiket, atau Bayar SPP, sistem akan meminta **PIN: 12345**.
+
+---
+
+## ⚙️ Persyaratan dan Cara Menjalankan
+
+1. Pastikan Anda memiliki modul lingkungan PHP lokal aktif (seperti XAMPP, Laragon, dll).
+2. _Clone_ atau ekstrak repositori ini ke dalam direktori *web server* lokal Anda (misalnya: `C:\xampp\htdocs\appsdistribusi`).
+3. Secara bawaan, seluruh aplikasi mendeteksi URL dan *port* di dalam direktori `apps_bank/config.php` dll.
+4. Buka akses melalui peramban:
+   - **Bank**: `http://localhost/appsdistribusi/apps_bank`
+   - **Ecommerce**: `http://localhost/appsdistribusi/apps_ecommerce`
+   - **Pendidikan**: `http://localhost/appsdistribusi/apps_pendidikan`
+   - **Travel**: `http://localhost/appsdistribusi/apps_travel`
+
+*(Konfigurasi URL sistem berada di file `_auth.php` atau `config.php` masing-masing jika port virtual/hostname ingin diubah).*
+
+---
+
+## 🏗️ 1. Diagram Arsitektur
+
+```text
                     AppsDistribusi - Full-Mesh REST API
                     ====================================
 
        ┌─────────────────────┐         ┌─────────────────────┐
        │   AppsBank (A)      │◄────────┤  AppsEcommerce (B)  │
-       │   localhost:8000    │  debit  │  localhost:8001     │
+       │   localhost/..bank  │  debit  │  localhost/..ecom   │
        │                     │  json   │                     │
        │ - rekening.json     │         │ - produk.json       │
        │ - mutasi.json       │         │ - keranjang.json    │
@@ -30,7 +71,7 @@ Folder ini berisi diagram dan laporan tugas. File biner (PNG/PDF) belum di-gener
           │              │                ▼              │
        ┌──┴──────────────┴───┐         ┌──────────────────┴──┐
        │ AppsPendidikan (C)  │────────►│   AppsTravel (D)    │
-       │ localhost:8002      │ voucher │   localhost:8003    │
+       │ localhost/..pend    │ voucher │   localhost/..trav  │
        │                     │ json    │                     │
        │ - siswa.json        │         │ - tiket.json        │
        │ - spp.json          │         │ - hotel.json        │
@@ -39,13 +80,11 @@ Folder ini berisi diagram dan laporan tugas. File biner (PNG/PDF) belum di-gener
                               json     └─────────────────────┘
                                        (Pendidikan→Ecommerce
                                         kirim produk siswa)
-
-   Komunikasi: HTTP REST + JSON via cURL · Tanpa SPOF
 ```
 
-## 2. ERD (text)
+## 🗄️ 2. Entitas Data (ERD Sederhana)
 
-```
+```text
 APPSBANK
 ┌──────────────┐         ┌────────────────┐
 │  rekening    │ 1     N │   mutasi       │
@@ -92,69 +131,26 @@ APPSTRAVEL
 │ harga, kuota │    │ harga/malam  │    │ untuk, siswa_id  │
 │ tipe         │    │ rating       │    │ sumber, dipakai  │
 └──────────────┘    └──────────────┘    └──────────────────┘
-                                        ┌──────────────────┐
-                                        │ pesanan          │
-                                        ├──────────────────┤
-                                        │ id, jenis        │
-                                        │ tiket/hotel id   │
-                                        │ qty, total       │
-                                        │ pemesan, no_rek  │
-                                        │ kode, status     │
-                                        └──────────────────┘
 ```
 
-## 3. Flowchart Komunikasi (text)
+## 🔄 3. Flow Komunikasi Integrasi
 
-```
-SKENARIO 1: PEMBAYARAN DI ECOMMERCE
------------------------------------
-User → [B] Ecommerce/checkout.php
-     → POST /api.php?action=checkout (internal)
-     → POST [A]/api.php?action=debit  (REST)
-     → [A] Bank validasi & update saldo
-     ← reply {success, saldo}
-     → [B] simpan pesanan, kurangi stok
-     ← reply ke user
+*Skenario Utama yang Diimplementasikan:*
 
-SKENARIO 2: UPLOAD PRODUK SISWA
--------------------------------
-Sekolah → [C] Pendidikan/jual_produk.php (klik Upload)
-        → POST [B]/api.php?action=add_produk (REST)
-        → [B] simpan produk dgn kategori=siswa, sumber=AppsPendidikan
-        ← reply {success, data:{id}}
-        → [C] update produk_siswa.ecommerce_id
-        → tampil di [B] Ecommerce/index.php
+**1. PEMBAYARAN VIA BANK**
+Semua sistem (Ecommerce, Pendidikan, Travel) akan menembak *endpoint* Bank secara sinkron lewat `POST /api.php?action=debit`. Jika saldo kurang atau rekening salah, transaksi di aplikasi asal akan dibatalkan/ditolak.
 
-SKENARIO 3: BUNDLE ECOMMERCE + TRAVEL
--------------------------------------
-User → [B] Ecommerce/bundle.php
-     → GET [D]/api.php?action=tiket  (load tiket live)
-     → GET [A]/api.php?action=rekening (load rekening)
-     User submit → 
-     → POST [A]/api.php?action=debit (bayar total)
-     → POST [D]/api.php?action=pesan_tiket (qty=1, diskon=15)
-     ← [D] reply {success, kode}
-     → [B] simpan pesanan dgn metode=BANK+BUNDLE
+**2. UPLOAD KARYA SISWA**
+Sekolah di AppsPendidikan dapat melempar produk kreasi siswanya ke AppsEcommerce melalui `POST /api.php?action=add_produk`. Jika berhasil terdaftar di *database* Ecommerce, produk langsung dapat dibeli secara massal.
 
-SKENARIO 4: DISKON SISWA → TRAVEL
----------------------------------
-Admin → [C] Pendidikan/diskon_travel.php
-      → POST [D]/api.php?action=tambah_voucher
-        body: {kode, persen, untuk, siswa_id, sumber}
-      ← [D] reply {success, data}
-      → tampil kode untuk diberikan ke siswa
+**3. VOUCHER & BUNDLE (LINTAS SISTEM)**
+Siswa berprestasi di Pendidikan dapat meminta *reward voucher* terbang dari AppsTravel. Voucher tersebut kemudian bisa diaplikasikan/di-_redeem_ di AppsEcommerce sebagai diskon barang (karena ada kerja sama API antara ketiganya).  Ada pula skenario di mana pengguna membeli paket *Bundle* (Barang + Tiket) lewat 1 tombol pembayaran.
 
-Siswa → [D] Travel/pesan.php
-      → POST [D]/api.php?action=pesan_tiket
-        body: {tiket_id, qty, kode_voucher, no_rek}
-      → [D] cek voucher, hitung diskon
-      → POST [A]/api.php?action=debit (bayar total - diskon)
-      ← reply ke siswa
-```
+---
 
-## 4. Tabel Endpoint REST API
+## 📡 4. Dokumentasi Endpoint REST API Terbuka
 
-### A. AppsBank (:8000)
+### A. AppsBank
 | Method | Endpoint | Body / Param |
 |--------|----------|--------------|
 | GET    | `/api.php?action=ping`        | -                                   |
@@ -165,7 +161,7 @@ Siswa → [D] Travel/pesan.php
 | POST   | `/api.php?action=transfer`    | `{dari, ke, jumlah, keterangan}`    |
 | GET    | `/api.php?action=mutasi`      | `?no_rek=`                          |
 
-### B. AppsEcommerce (:8001)
+### B. AppsEcommerce
 | Method | Endpoint | Body / Param |
 |--------|----------|--------------|
 | GET    | `/api.php?action=ping`        | -                                            |
@@ -174,7 +170,7 @@ Siswa → [D] Travel/pesan.php
 | GET    | `/api.php?action=pesanan`     | -                                            |
 | POST   | `/api.php?action=checkout`    | `{user, no_rek, items:[{produk_id, qty}]}`   |
 
-### C. AppsPendidikan (:8002)
+### C. AppsPendidikan
 | Method | Endpoint | Body / Param |
 |--------|----------|--------------|
 | GET    | `/api.php?action=ping`         | -          |
@@ -183,7 +179,7 @@ Siswa → [D] Travel/pesan.php
 | GET    | `/api.php?action=produk_siswa` | -          |
 | GET    | `/api.php?action=spp`          | -          |
 
-### D. AppsTravel (:8003)
+### D. AppsTravel
 | Method | Endpoint | Body / Param |
 |--------|----------|--------------|
 | GET    | `/api.php?action=ping`           | -                                                                  |

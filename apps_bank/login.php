@@ -7,7 +7,7 @@ $err = '';
 $redirect = $_GET['redirect'] ?? $_POST['redirect'] ?? '/index.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $r = login_user($_POST['username'] ?? '', $_POST['password'] ?? '');
-    if (!empty($r['success'])) { header('Location: ' . SISTEM_URL . $redirect); exit; }
+    if (!empty($r['success'])) { set_flash_msg('Login sukses, selamat datang!', 'success'); header('Location: ' . SISTEM_URL . $redirect); exit; }
     $err = $r['message'];
 }
 ?>

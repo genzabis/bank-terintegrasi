@@ -3,9 +3,12 @@ require_once __DIR__ . '/../_layout.php';
 
 $tiket = get_tiket();
 $rek = fetch_rekening_bank();
+$user = current_user()['username'] ?? 'guest';
+if ($user !== 'guest') {
+    $rek = array_values(array_filter($rek, fn($r) => ($r['username'] ?? '') === $user));
+}
 $pre = $_GET['tiket_id'] ?? '';
 
-$msg=''; $cls=''; $kodeBooking=null;
 if ($_SERVER['REQUEST_METHOD']==='POST') {
     $r = proses_pesan_tiket(
         $_POST['tiket_id'],
@@ -17,16 +20,18 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
         'WEB-PESAN'
     );
     if (!empty($r['success'])) {
-        $msg = "Booking sukses · Kode {$r['data']['kode']} · Total ".format_rupiah($r['data']['total']);
-        $kodeBooking = $r['data']['kode'];
-        $cls='success';
-    } else { $msg = $r['message']??'Gagal'; $cls='danger'; }
+        set_flash_msg("Booking sukses · Kode {$r['data']['kode']} · Total ".format_rupiah($r['data']['total']), 'success');
+        header('Location: pesan.php'); exit;
+    } else { 
+        set_flash_msg($r['message']??'Gagal', 'danger');
+        header('Location: pesan.php'); exit; 
+    }
 }
 
 layout_start('Pesan Tiket', 'Booking tiket dengan pembayaran via AppsBank dan voucher dari Pendidikan');
 ?>
 
-<?php if ($msg): ?><div class="alert <?= $cls ?>"><?= htmlspecialchars($msg) ?></div><?php endif; ?>
+
 
 <div class="row cols-1-2">
   <div class="card">

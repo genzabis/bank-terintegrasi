@@ -72,3 +72,14 @@ function inisial_nama(string $n): string {
     if (isset($p[1])) $i .= strtoupper(substr($p[1], 0, 1));
     return $i ?: '?';
 }
+
+function set_flash_msg(string $msg, string $type = 'success'): void {
+    if (session_status() === PHP_SESSION_NONE) session_start();
+    $_SESSION['flash_msgs'][] = ['msg' => $msg, 'type' => $type];
+}
+function get_flash_msgs(): array {
+    if (session_status() === PHP_SESSION_NONE) session_start();
+    $msgs = $_SESSION['flash_msgs'] ?? [];
+    unset($_SESSION['flash_msgs']);
+    return $msgs;
+}

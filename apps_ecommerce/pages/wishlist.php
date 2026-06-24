@@ -1,11 +1,13 @@
 <?php
 require_once __DIR__ . '/../_layout.php';
 
+$uname = current_user()['username'] ?? 'guest';
 if ($_SERVER['REQUEST_METHOD']==='POST') {
-    toggle_wishlist('guest', $_POST['produk_id']);
+    toggle_wishlist($uname, $_POST['produk_id']);
+    set_flash_msg('Wishlist diperbarui', 'info');
     header('Location: wishlist.php'); exit;
 }
-$wishIds = get_wishlist('guest');
+$wishIds = get_wishlist($uname);
 $produk  = get_produk();
 $items   = array_values(array_filter($produk, fn($p)=>in_array($p['id'], $wishIds)));
 

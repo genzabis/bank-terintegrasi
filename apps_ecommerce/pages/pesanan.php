@@ -4,9 +4,7 @@ $pesanan = get_pesanan();
 layout_start('Riwayat Pesanan', 'Daftar transaksi yang sudah lunas');
 ?>
 
-<?php if (isset($_GET['ok'])): ?>
-  <div class="alert success"><i data-lucide="check-circle-2"></i><div>Pembayaran sukses! Saldo bank telah terdebit otomatis dan stok produk terupdate.</div></div>
-<?php endif; ?>
+
 
 <?php foreach ($pesanan as $p): ?>
   <div class="card mb">

@@ -5,12 +5,12 @@
 define('SISTEM_NAMA', 'AppsBank');
 define('SISTEM_KODE', 'A');
 define('SISTEM_PORT', 8000);
-define('SISTEM_URL',  'http://192.168.18.176:8000');
+define('SISTEM_URL',  'http://localhost:8000');
 
 // URL sistem lain (full-mesh)
-define('ECOMMERCE_URL',  '192.168.18.176:8001');
-define('PENDIDIKAN_URL', 'http://10.10.4.167:8002');
-define('TRAVEL_URL',     'http://10.10.4.127:8003');
+define('ECOMMERCE_URL',  'http://localhost:8001');
+define('PENDIDIKAN_URL', 'http://localhost:8002');
+define('TRAVEL_URL',     'http://localhost:8003');
 
 // Path data lokal
 define('DATA_DIR',       __DIR__ . '/data');

@@ -4,6 +4,10 @@ require_once __DIR__ . '/../_layout.php';
 $produk = fetch_produk_ecommerce();
 $tiket  = get_tiket();
 $rek    = fetch_rekening_bank();
+$user = current_user()['username'] ?? 'guest';
+if ($user !== 'guest') {
+    $rek = array_values(array_filter($rek, fn($r) => ($r['username'] ?? '') === $user));
+}
 
 $msg=''; $cls='';
 if ($_SERVER['REQUEST_METHOD']==='POST') {

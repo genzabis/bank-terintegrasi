@@ -1,11 +1,7 @@
 <?php
 require_once __DIR__ . '/../_layout.php';
 
-$msg = ''; $cls = '';
-if (isset($_GET['msg'])) {
-    $msg = $_GET['msg'];
-    $cls = $_GET['err'] ?? 0 ? 'danger' : 'success';
-}
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dari = trim($_POST['dari']);
@@ -13,20 +9,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $amt  = (float)$_POST['jumlah'];
     $ket  = trim($_POST['keterangan'] ?? 'Transfer');
     if (!$dari || !$ke || $amt <= 0) { 
-        header("Location: transfer.php?msg=" . urlencode('Parameter tidak lengkap') . "&err=1"); exit;
+        set_flash_msg('Parameter tidak lengkap', 'danger');
+        header("Location: transfer.php"); exit;
     } elseif ($dari === $ke) { 
-        header("Location: transfer.php?msg=" . urlencode('Rekening asal & tujuan sama') . "&err=1"); exit;
+        set_flash_msg('Rekening asal & tujuan sama', 'danger');
+        header("Location: transfer.php"); exit;
     } else {
         $rek_tujuan = find_rekening($ke);
         if (!$rek_tujuan) {
-            header("Location: transfer.php?msg=" . urlencode('Rekening tujuan tidak valid') . "&err=1"); exit;
+            set_flash_msg('Rekening tujuan tidak valid', 'danger');
+            header("Location: transfer.php"); exit;
         }
         $r1 = update_saldo($dari, $amt, 'DEBIT', "Transfer ke $ke - $ket", 'INTERNAL');
         if (!$r1['success']) { 
-            header("Location: transfer.php?msg=" . urlencode($r1['message']) . "&err=1"); exit;
+            set_flash_msg($r1['message'], 'danger');
+            header("Location: transfer.php"); exit;
         } else {
             update_saldo($ke, $amt, 'KREDIT', "Transfer dari $dari - $ket", 'INTERNAL');
-            header("Location: transfer.php?msg=" . urlencode('Transfer sukses · Sisa saldo ' . format_rupiah($r1['saldo'])) . "&err=0"); exit;
+            set_flash_msg('Transfer sukses · Sisa saldo ' . format_rupiah($r1['saldo']), 'success');
+            header("Location: transfer.php"); exit;
         }
     }
 }
@@ -38,7 +39,7 @@ $rekening_semua = get_rekening();
 layout_start('Transfer Antar Rekening', 'Pindahkan dana antar rekening internal Bank');
 ?>
 
-<?php if ($msg): ?><div class="alert <?= $cls ?>"><span class="ico">●</span><?= htmlspecialchars($msg) ?></div><?php endif; ?>
+
 
 <div class="row cols-1-2" style="max-width:900px">
   <div class="card">

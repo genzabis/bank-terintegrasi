@@ -1,12 +1,15 @@
 <?php
 require_once __DIR__ . '/_layout.php';
 
+$uname = current_user()['username'] ?? 'guest';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['act'] ?? '') === 'addcart') {
-    add_keranjang('guest', $_POST['produk_id'], (int)($_POST['qty'] ?? 1));
+    add_keranjang($uname, $_POST['produk_id'], (int)($_POST['qty'] ?? 1));
+    set_flash_msg('Produk ditambahkan ke keranjang!', 'success');
     header('Location: pages/keranjang.php'); exit;
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['act'] ?? '') === 'wish') {
-    toggle_wishlist('guest', $_POST['produk_id']);
+    toggle_wishlist($uname, $_POST['produk_id']);
+    set_flash_msg('Wishlist diperbarui', 'info');
     header('Location: index.php'); exit;
 }
 
@@ -24,7 +27,7 @@ if ($sort === 'mahal')   usort($filtered, fn($a,$b)=>$b['harga']<=>$a['harga']);
 if ($sort === 'rating')  usort($filtered, fn($a,$b)=>($b['rating']??0)<=>($a['rating']??0));
 if ($sort === 'terjual') usort($filtered, fn($a,$b)=>($b['terjual']??0)<=>($a['terjual']??0));
 
-$wishlist = get_wishlist('guest');
+$wishlist = get_wishlist($uname);
 $pesanan  = get_pesanan();
 $totalRevenue = array_sum(array_column($pesanan, 'total'));
 $totalSold    = array_sum(array_column($produk, 'terjual'));

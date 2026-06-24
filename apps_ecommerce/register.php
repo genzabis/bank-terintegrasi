@@ -6,6 +6,7 @@ $msg=''; $cls='';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $r = register_user($_POST['username']??'', $_POST['nama']??'', $_POST['email']??'', $_POST['password']??'');
     if (!empty($r['success'])) {
+        set_flash_msg('Registrasi sukses, silakan masuk', 'success');
         login_user($_POST['username'], $_POST['password']);
         header('Location: ' . SISTEM_URL . '/index.php'); exit;
     }

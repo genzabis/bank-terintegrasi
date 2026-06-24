@@ -1,8 +1,12 @@
 <?php
 require_once __DIR__ . '/../_layout.php';
 
+$user = current_user()['username'] ?? 'guest';
 $tiket   = fetch_tiket_travel();
 $rekList = fetch_rekening_bank();
+if ($user !== 'guest') {
+    $rekList = array_values(array_filter($rekList, fn($r) => ($r['username'] ?? '') === $user));
+}
 $produk  = get_produk();
 
 $msg=''; $cls='';
@@ -25,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
             $kode = $resvr['data']['kode'] ?? null;
             kurangi_stok($p['id'], $qty);
             simpan_pesanan([
-                'user'=>'guest','no_rek'=>$no,
+                'user'=>$user,'no_rek'=>$no,
                 'items'=>[['produk_id'=>$p['id'],'nama'=>$p['nama'],'qty'=>$qty,'harga'=>$p['harga'],'sub'=>$totProduk]],
                 'total'=>$total,'status'=>'LUNAS','metode'=>'BANK+BUNDLE',
                 'bundle'=>['tiket_id'=>$tid,'nama'=>$t['nama'],'harga'=>$hargaTiket,'diskon'=>$diskon,'kode'=>$kode],

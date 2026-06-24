@@ -14,5 +14,29 @@
         "password": "$2y$10$lvI7paHExZ4A05JdHwjABOqFYzZNiU8Kt1.4oXJV\/ktobn9D17cUe",
         "role": "user",
         "dibuat": "2026-05-20 08:46:11"
+    },
+    {
+        "username": "niam",
+        "nama": "Niam",
+        "email": "niam@apps.local",
+        "password": "$2y$10$ITNROsEZBbrDlhir1oBvk.KCRKJ\/d0Bd7tayEFFgG0R0M.5wSzZQC",
+        "role": "user",
+        "dibuat": "2026-06-23 14:14:19"
+    },
+    {
+        "username": "isna",
+        "nama": "Isna",
+        "email": "isna@apps.local",
+        "password": "$2y$10$9LhVI3oavCgE7vKe3mNVNOvAT71eZH4UEBkQEy1H7rd3OF3snaSne",
+        "role": "user",
+        "dibuat": "2026-06-23 14:14:19"
+    },
+    {
+        "username": "linda",
+        "nama": "Linda",
+        "email": "linda@apps.local",
+        "password": "$2y$10$u7LIAMoNvIpDaJIqHj6lMeWZDb.cDBL7gDe6MUYjkBW6iagE8He9u",
+        "role": "user",
+        "dibuat": "2026-06-23 14:14:19"
     }
 ]

@@ -1,24 +1,108 @@
 [
     {
-        "user": "guest",
-        "no_rek": "1006",
+        "user": "niam",
+        "no_rek": "100010001",
+        "items": [
+            {
+                "produk_id": "P004",
+                "nama": "Headphone Bluetooth Pro",
+                "qty": 4,
+                "harga": 480000,
+                "sub": 1920000
+            }
+        ],
+        "subtotal": 1920000,
+        "diskon": 0,
+        "voucher": "",
+        "total": 1920000,
+        "status": "LUNAS",
+        "metode": "BANK",
+        "id": "PSN2026062411375131",
+        "tanggal": "2026-06-24 11:37:51"
+    },
+    {
+        "user": "niam",
+        "no_rek": "100010001",
+        "items": [
+            {
+                "produk_id": "P003",
+                "nama": "Snack Combo Box Family",
+                "qty": 1,
+                "harga": 75000,
+                "sub": 75000
+            }
+        ],
+        "subtotal": 75000,
+        "diskon": 0,
+        "voucher": "",
+        "total": 75000,
+        "status": "LUNAS",
+        "metode": "BANK",
+        "id": "PSN2026062411373282",
+        "tanggal": "2026-06-24 11:37:32"
+    },
+    {
+        "user": "niam",
+        "no_rek": "100010001",
         "items": [
             {
                 "produk_id": "P001",
                 "nama": "Sepatu Sneakers Urban",
-                "qty": 2,
+                "qty": 1,
                 "harga": 350000,
-                "sub": 700000
+                "sub": 350000
             }
         ],
-        "subtotal": 700000,
+        "subtotal": 350000,
         "diskon": 0,
         "voucher": "",
-        "total": 700000,
+        "total": 350000,
         "status": "LUNAS",
         "metode": "BANK",
-        "id": "PSN2026061711320143",
-        "tanggal": "2026-06-17 11:32:01"
+        "id": "PSN2026062411252776",
+        "tanggal": "2026-06-24 11:25:27"
+    },
+    {
+        "user": "niam",
+        "no_rek": "100010001",
+        "items": [
+            {
+                "produk_id": "P002",
+                "nama": "Tas Punggung Tahan Air",
+                "qty": 1,
+                "harga": 250000,
+                "sub": 250000
+            }
+        ],
+        "subtotal": 250000,
+        "diskon": 0,
+        "voucher": "",
+        "total": 250000,
+        "status": "LUNAS",
+        "metode": "BANK",
+        "id": "PSN2026062410552143",
+        "tanggal": "2026-06-24 10:55:21"
+    },
+    {
+        "user": "niam",
+        "no_rek": "100010001",
+        "items": [
+            {
+                "produk_id": "P001",
+                "nama": "Sepatu Sneakers Urban",
+                "qty": 1,
+                "harga": 350000,
+                "sub": 350000
+            }
+        ],
+        "subtotal": 350000,
+        "diskon": 0,
+        "voucher": "",
+        "total": 350000,
+        "status": "LUNAS",
+        "metode": "BANK",
+        "id": "PSN2026062410190847",
+        "tanggal": "2026-06-24 10:19:08"
     },
     {
         "user": "guest",
@@ -40,5 +124,47 @@
         "metode": "BANK",
         "id": "PSN2026061711344350",
         "tanggal": "2026-06-17 11:34:43"
+    },
+    {
+        "user": "guest",
+        "no_rek": "1006",
+        "items": [
+            {
+                "produk_id": "P001",
+                "nama": "Sepatu Sneakers Urban",
+                "qty": 2,
+                "harga": 350000,
+                "sub": 700000
+            }
+        ],
+        "subtotal": 700000,
+        "diskon": 0,
+        "voucher": "",
+        "total": 700000,
+        "status": "LUNAS",
+        "metode": "BANK",
+        "id": "PSN2026061711320143",
+        "tanggal": "2026-06-17 11:32:01"
+    },
+    {
+        "user": "niam",
+        "no_rek": "100010001",
+        "items": [
+            {
+                "produk_id": "P001",
+                "nama": "Sepatu Sneakers Urban",
+                "qty": 1,
+                "harga": 350000,
+                "sub": 350000
+            }
+        ],
+        "subtotal": 350000,
+        "diskon": 0,
+        "voucher": "",
+        "total": 350000,
+        "status": "LUNAS",
+        "metode": "BANK",
+        "id": "PSN2026062411432548",
+        "tanggal": "2026-06-24 11:43:25"
     }
 ]

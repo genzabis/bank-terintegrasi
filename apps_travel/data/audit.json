@@ -1,1 +1,113 @@
-[]
+[
+    {
+        "id": "AUD20260624074518730",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/10.10.5.52:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 100010001 Rp 850.000",
+        "payload": {
+            "no_rek": "100010001",
+            "jumlah": 850000
+        },
+        "tanggal": "2026-06-24 07:45:18"
+    },
+    {
+        "id": "AUD20260624074538228",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "tiket",
+        "endpoint": "GET \/api.php?action=tiket",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "tiket"
+        },
+        "tanggal": "2026-06-24 07:45:38"
+    },
+    {
+        "id": "AUD20260624074539141",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "voucher",
+        "endpoint": "GET \/api.php?action=voucher",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "voucher"
+        },
+        "tanggal": "2026-06-24 07:45:39"
+    },
+    {
+        "id": "AUD20260624074554568",
+        "arah": "IN",
+        "peer": "AppsPendidikan",
+        "action": "tambah_voucher",
+        "endpoint": "POST \/api.php?action=tambah_voucher",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "tambah_voucher",
+            "kode": "EDU-6BFA40-20",
+            "persen": 20,
+            "sumber": "AppsPendidikan",
+            "untuk": "Andi Pratama",
+            "siswa_id": "S0001"
+        },
+        "tanggal": "2026-06-24 07:45:54"
+    },
+    {
+        "id": "AUD20260624074554280",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "voucher",
+        "endpoint": "GET \/api.php?action=voucher",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "voucher"
+        },
+        "tanggal": "2026-06-24 07:45:54"
+    },
+    {
+        "id": "AUD20260624074623631",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "tiket",
+        "endpoint": "GET \/api.php?action=tiket",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "tiket"
+        },
+        "tanggal": "2026-06-24 07:46:23"
+    },
+    {
+        "id": "AUD20260624074626293",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/10.10.5.52:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 100010003 Rp 750.000",
+        "payload": {
+            "no_rek": "100010003",
+            "jumlah": 750000
+        },
+        "tanggal": "2026-06-24 07:46:26"
+    },
+    {
+        "id": "AUD20260624102304961",
+        "arah": "IN",
+        "peer": "EXTERNAL",
+        "action": "voucher",
+        "endpoint": "GET \/api.php?action=voucher",
+        "ok": true,
+        "message": "",
+        "payload": {
+            "action": "voucher"
+        },
+        "tanggal": "2026-06-24 10:23:04"
+    }
+]

@@ -50,5 +50,33 @@
             "asal_id": "PS2026061711361159"
         },
         "tanggal": "2026-06-17 11:40:55"
+    },
+    {
+        "id": "AUD20260624102210588",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/localhost:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 100010001 Rp 1.000.000",
+        "payload": {
+            "no_rek": "100010001",
+            "jumlah": 1000000
+        },
+        "tanggal": "2026-06-24 10:22:10"
+    },
+    {
+        "id": "AUD20260624105538691",
+        "arah": "OUT",
+        "peer": "AppsBank",
+        "action": "debit",
+        "endpoint": "http:\/\/localhost:8000\/api.php?action=debit",
+        "ok": true,
+        "message": "Debit 100010001 Rp 10.000",
+        "payload": {
+            "no_rek": "100010001",
+            "jumlah": 10000
+        },
+        "tanggal": "2026-06-24 10:55:38"
     }
 ]
